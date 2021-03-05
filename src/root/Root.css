@@ -1,5 +1,25 @@
 .Root {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  resize: both;
+  overflow: auto;
+}
+.overlay {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: black;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  resize: both;
+  overflow: auto;
 }
