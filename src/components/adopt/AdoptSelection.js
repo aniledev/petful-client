@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 export default class AdoptSelection extends Component {
   render() {
@@ -13,7 +15,10 @@ export default class AdoptSelection extends Component {
               <div class="row">
                 <div class="col-2 my-auto">
                   <button type="button" class="btn btn-primary btn-sm caret">
-                    <i class="fas fa-caret-left"></i>
+                    <FontAwesomeIcon
+                      icon={faCaretLeft}
+                      className="caret-left"
+                    />
                   </button>
                 </div>
                 <div class="col-8">
@@ -24,7 +29,10 @@ export default class AdoptSelection extends Component {
                 </div>
                 <div class="col-2 my-auto">
                   <button type="button" class="btn btn-primary btn-sm caret">
-                    <i class="fas fa-caret-right"></i>
+                    <FontAwesomeIcon
+                      icon={faCaretRight}
+                      className="caret-right"
+                    />
                   </button>
                 </div>
               </div>
@@ -50,7 +58,10 @@ export default class AdoptSelection extends Component {
               <div class="row">
                 <div class="col-2 my-auto">
                   <button type="button" class="btn btn-primary btn-sm caret">
-                    <i class="fas fa-caret-left"></i>
+                    <FontAwesomeIcon
+                      icon={faCaretLeft}
+                      className="caret-left"
+                    />
                   </button>
                 </div>
                 <div class="col-8">
@@ -62,7 +73,10 @@ export default class AdoptSelection extends Component {
                 </div>
                 <div class="col-2 my-auto">
                   <button type="button" class="btn btn-primary btn-sm caret">
-                    <i class="fas fa-caret-right"></i>
+                    <FontAwesomeIcon
+                      icon={faCaretRight}
+                      className="caret-right"
+                    />
                   </button>
                 </div>
               </div>
