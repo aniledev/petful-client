@@ -5,7 +5,7 @@ import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 export default class AdoptSelection extends Component {
   render() {
     return (
-      <div class="container">
+      <div class="container mb-4">
         <div class="row">
           <div class="col-md text-center">
             <div>
@@ -45,7 +45,7 @@ export default class AdoptSelection extends Component {
               <p>Story: Thrown on the street</p>
             </div>
             <div class="mb-5">
-              <button type="button" class="btn">
+              <button type="button" class="btn adopt-button">
                 Adopt Cat!
               </button>
             </div>
@@ -89,8 +89,8 @@ export default class AdoptSelection extends Component {
               <p>Story: Owner passed away</p>
             </div>
             <div class="mb-5">
-              <button type="button" class="btn">
-                Adopt Cat!
+              <button type="button" class="btn adopt-button">
+                Adopt Dog!
               </button>
             </div>
           </div>
