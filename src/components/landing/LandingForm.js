@@ -22,6 +22,31 @@ class LandingForm extends Component {
     // name cannot contain more than 100 characters
     // use the validateName function to disable submission of the form
   }
+
+  // write method that uses the POST/api/people to add the name to the list of adopters
+  addNameToQueue() {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const newName = JSON.stringify({
+      name: "Elina",
+    });
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: newName,
+      redirect: "follow",
+    };
+
+    fetch(`${PORT_URL}/api/people`, requestOptions)
+      // use chained promises to post the data to the server, no data is received from this POST
+      .then((response) => response.json())
+      .then((result) => console.log(result))
+      .catch((error) => console.log("error", error));
+    // clear this.state.name once the POST request is successful
+  }
+
   render() {
     return (
       <div className="d-flex justify-content-center input mb-5 pb-5">
