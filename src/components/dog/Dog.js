@@ -55,3 +55,5 @@ export default class Dog extends Component {
     );
   }
 }
+
+// add prop types for the props that are passed down
