@@ -30,17 +30,25 @@ export default class Dog extends Component {
     // use this.setState to update state with response data
   }
 
+  // add a timeout method that adopts a dog every 5 seconds
+  /* add a conditional rendering that will disable the adopt button if 
+  it is not the users turn in the queue*/
+
   render() {
     return (
       <div class="col-md text-center">
         <DogHeading />
-        {/* once this.state.dogs is updated, pass down description and imageUrl to dogImage component */}
+        {/* once this.state.dogs is updated, pass down description and 
+        imageUrl to dogImage component */}
         <DogImage />
-        {/* once this.state.dogs is updated, pass down age, breed, gender, name and story to dogImage component */}
+        {/* once this.state.dogs is updated, pass down age, breed, gender, 
+        name and story to dogImage component */}
         <DogInfo />
         <div class="mb-5">
+          {/* add event handler to button to trigger DELETE /api/dogs dequeue 
+          a dog, this also will update the state*/}
           <button type="button" class="btn adopt-button">
-            Adopt Dog!
+            Adopt!
           </button>
         </div>
       </div>

@@ -30,17 +30,25 @@ export default class Cat extends Component {
     // use this.setState to update state with response data
   }
 
+  // add a timeout method that adopts a dog every 5 seconds
+  /* add a conditional rendering that will disable the adopt button if 
+  it is not the users turn in the queue*/
+
   render() {
     return (
       <div class="col-md text-center">
         <CatHeading />
         <CatImage />
-        {/* once this.state.cats is updated, pass down description and imageUrl to CatImage component */}
+        {/* once this.state.cats is updated, pass down description and 
+        imageUrl to CatImage component */}
         <CatInfo />
-        {/* once this.state.cats is updated, pass down age, breed, gender, name and story to CatImage component */}
+        {/* once this.state.cats is updated, pass down age, breed, gender,
+        name and story to CatImage component */}
         <div class="mb-5">
+          {/* add event handler to button to trigger DELETE /api/cats dequeue 
+          a cat, this also will update the state*/}
           <button type="button" class="btn adopt-button">
-            Adopt Cat!
+            Adopt!
           </button>
         </div>
       </div>
