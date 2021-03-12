@@ -9,6 +9,12 @@ class LandingForm extends Component {
     };
   }
 
+  // create an onChange of the input box update this.state.name
+  handleInputChange() {
+    // on change of event, this.setState with value from the input box
+    // trigger the addNameToQueue method to send this.state.name to the server to add to queue
+  }
+
   render() {
     return (
       <div className="d-flex justify-content-center input mb-5 pb-5">
