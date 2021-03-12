@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../styles/adopt-view.css";
 import Navbar from "../components/navigation/Navbar";
 import Footer from "../components/navigation/Footer";
 
@@ -8,7 +9,7 @@ class AdoptView extends Component {
       <>
         <Navbar />
 
-        <main class="container-md">
+        <main class="container-md adopt">
           <div class="text-center mt-5 mb-3">
             <h2>
               When it's your turn in the queue, just adopt the next cat or dog
