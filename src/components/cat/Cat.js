@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import CatHeading from "./CatHeading";
 import CatImage from "./CatImage";
 import CatInfo from "./CatInfo";
-import config from "../../config";
+import PORT_URL from "../../config";
 
 export default class Cat extends Component {
   // initialize state to hold fetch data for cats
@@ -22,7 +22,7 @@ export default class Cat extends Component {
       redirect: "follow",
     };
 
-    fetch(`${config}/api/cats`, requestOptions)
+    fetch(`${PORT_URL}/api/cats`, requestOptions)
       // use chained promises to receive the data from the server
       .then((response) => response.json())
       .then((result) => console.log(result))
