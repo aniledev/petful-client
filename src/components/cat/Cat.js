@@ -5,6 +5,14 @@ import CatImage from "./CatImage";
 import CatInfo from "./CatInfo";
 
 export default class Cat extends Component {
+  // initialize state to hold fetch data for cats
+  constructor(props) {
+    super(props);
+    this.state = {
+     
+    };
+  }
+
   render() {
     return (
       <div class="col-md text-center">
