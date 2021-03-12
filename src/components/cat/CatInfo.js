@@ -1,11 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class CatInfo extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div class="mt-3">
+        <p>Name: Steve French</p>
+        <p>Sex: Female</p>
+        <p>Age: 2</p>
+        <p>Breed: Bengal</p>
+        <p>Story: Thrown on the street</p>
+      </div>
+    );
+  }
 }
