@@ -6,8 +6,8 @@ import Dog from "../dog/Dog";
 export default class AdoptSelection extends Component {
   render() {
     return (
-      <div class="container mb-4">
-        <div class="row">
+      <div className="container mb-4">
+        <div className="row">
           <Cat />
           <Dog />
         </div>

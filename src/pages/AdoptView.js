@@ -12,7 +12,7 @@ class AdoptView extends Component {
       <>
         <Navbar />
 
-        <main class="container-md adopt">
+        <main className="container-md adopt">
           <AdoptInstructions />
 
           <AdoptQueue />

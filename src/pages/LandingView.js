@@ -12,7 +12,7 @@ class LandingView extends Component {
     return (
       <div className="background">
         <Navbar />
-        <main class="container-md landing">
+        <main className="container-md landing">
           <LandingTitle />
           <LandingSubtitle />
           <LandingInstructions />

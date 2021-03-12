@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class CatInfo extends Component {
   render() {
     return (
-      <div class="mt-3">
+      <div className="mt-3">
         <p>Name: Steve French</p>
         <p>Sex: Female</p>
         <p>Age: 2</p>

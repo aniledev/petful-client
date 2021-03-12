@@ -45,7 +45,7 @@ export default class AdoptQueue extends Component {
     }
 
     return (
-      <div class="text-center adoption-queue mb-5">
+      <div className="text-center adoption-queue mb-5">
         <p>Next in line: {queue()}</p>
       </div>
     );

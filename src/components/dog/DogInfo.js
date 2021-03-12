@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class DogInfo extends Component {
   render() {
     return (
-      <div class="mt-3">
+      <div className="mt-3">
         <p>Name: Zim</p>
         <p>Sex: Male</p>
         <p>Age: 3</p>
