@@ -25,28 +25,28 @@ img {
   height: 250px;
 }
 
-.btn {
-  background-color: #6e44ff;
-  border-color: #6e44ff;
-  color: whitesmoke;
+.adopt-button {
+  background-color: #6e44ff !important;
+  border-color: #6e44ff !important;
+  color: whitesmoke !important;
 }
 
-.btn:hover,
-.btn:focus {
-  background-color: #4f1fff;
-  border-color: #4f1fff;
-  color: whitesmoke;
+.adopt-button:hover,
+.adopt-button:focus {
+  background-color: #4f1fff !important;
+  border-color: #4f1fff !important;
+  color: whitesmoke !important;
 }
 
 .caret {
-  background-color: #494f5a;
-  border-color: #494f5a;
-  color: whitesmoke;
+  background-color: #494f5a !important;
+  border-color: #494f5a !important;
+  color: whitesmoke !important;
 }
 
 .caret:hover,
 .caret:focus {
-  background-color: #1c1e22;
-  border-color: #1c1e22;
-  color: whitesmoke;
+  background-color: #1c1e22 !important;
+  border-color: #1c1e22 !important;
+  color: whitesmoke !important;
 }
