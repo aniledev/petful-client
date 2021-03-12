@@ -3,6 +3,14 @@ import STORE from "../../dummy-store";
 import PORT_URL from "../../config";
 
 export default class AdoptQueue extends Component {
+  // initialize state to hold fetch data for adopters
+  constructor(props) {
+    super(props);
+    this.state = {
+      adopters: [],
+    };
+  }
+
   componentDidMount() {
     /* when the component is mounted, immediately preform a GET request to /api/people 
        to receive adopters in the queue*/
@@ -17,7 +25,7 @@ export default class AdoptQueue extends Component {
       .then((response) => response.json())
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
-    // use this.setState to update this.state.people with response data
+    // use this.setState to update this.state.adopters with response data
   }
 
   // add a timeout method that adopts a pet every 5 seconds, dequeue a person every 5sec
