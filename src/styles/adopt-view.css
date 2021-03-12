@@ -1,0 +1,52 @@
+main {
+  color: #1c1e22;
+}
+
+h1 {
+  width: 60%;
+}
+
+.adoption-queue {
+  font-size: 1.5em;
+}
+
+.fixed-bottom {
+  color: whitesmoke;
+  font-size: medium;
+  padding: 5px 0;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+img {
+  width: 95%;
+  height: 250px;
+}
+
+.btn {
+  background-color: #6e44ff;
+  border-color: #6e44ff;
+  color: whitesmoke;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #4f1fff;
+  border-color: #4f1fff;
+  color: whitesmoke;
+}
+
+.caret {
+  background-color: #494f5a;
+  border-color: #494f5a;
+  color: whitesmoke;
+}
+
+.caret:hover,
+.caret:focus {
+  background-color: #1c1e22;
+  border-color: #1c1e22;
+  color: whitesmoke;
+}

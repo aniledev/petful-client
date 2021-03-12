@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "../components/navigation/Navbar";
+import Footer from "../components/navigation/Footer";
 
 class AdoptView extends Component {
   render() {
@@ -113,9 +114,7 @@ class AdoptView extends Component {
           </div>
         </main>
 
-        <footer class="fixed-bottom container-fluid d-flex justify-content-center bg-dark">
-          Made with love by @aniledev on GitHub. Hosted with Vercel.
-        </footer>
+        <Footer />
       </>
     );
   }

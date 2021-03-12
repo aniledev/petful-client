@@ -4,7 +4,7 @@ class AboutView extends Component {
     render() {
         return (
             <div>
-                Content Coming Soon
+                
             </div>
         );
     }
