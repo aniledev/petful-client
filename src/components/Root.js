@@ -1,27 +1,26 @@
 import React, { Component } from "react";
-import "./Root.css";
+import { Route, Switch } from "react-router-dom";
+import "../styles/Root.css";
+import PetsView from "../pages/PetsView";
+import AdoptView from "../pages/AdoptView";
+import AboutView from "../pages/AboutView";
+import ContactView from "../pages/ContactView";
+import LandingView from "../pages/LandingView";
+import NotFoundView from "../pages/NotFoundView";
 
-class Root extends Component {
+export default class App extends Component {
   render() {
     return (
       <div className="Root">
-        <div className="overlay">
-          <h1>FIFO Pet Adoption</h1>
-          <p>
-            Welcome to the FIFO Pet adoption website! Here at FIFO we believe
-            that each pet should have a chance at their furever home. This
-            vision inspired us to create the first and premier FIFO pet adopton
-            service. This means that the first pet to come to the shelter is the
-            first cat or dog that gets adopted.
-          </p>
-          <p>
-            To join the queue of adopters, click the buttton below. When it's
-            your chance to adopt, get ready to take your furbaby home!
-          </p>
-        </div>
+        <Switch>
+          <Route exact path="/pets" component={PetsView} />
+          <Route exact path="/adopt" component={AdoptView} />
+          <Route exact path="/about" component={AboutView} />
+          <Route exact path="/contact" component={ContactView} />
+          <Route exact path="/" component={LandingView} />
+          <Route component={NotFoundView} />
+        </Switch>
       </div>
     );
   }
 }
-
-export default Root;

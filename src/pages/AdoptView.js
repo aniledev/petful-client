@@ -4,7 +4,7 @@ class AdoptView extends Component {
     render() {
         return (
             <div>
-                
+                Adopt View
             </div>
         );
     }
