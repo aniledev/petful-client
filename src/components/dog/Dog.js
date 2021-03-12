@@ -14,11 +14,22 @@ export default class Dog extends Component {
   }
 
   componentDidMount() {
-    /* when the component is mounted, immediately preform a GET request to /api/dogs 
-       to receive dog image and dog info */
-    // use chained promises to receive the data from the server
+    /* when the component is mounted, immediately preform a GET request to /api/cats 
+       to receive cat image and cat info */
+
+    const requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    fetch(`${config}/api/dogs`, requestOptions)
+      // use chained promises to receive the data from the server
+      .then((response) => response.json())
+      .then((result) => console.log(result))
+      .catch((error) => console.log("error", error));
     // use this.setState to update state with response data
   }
+
   render() {
     return (
       <div class="col-md text-center">
