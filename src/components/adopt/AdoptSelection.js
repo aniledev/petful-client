@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../../styles/adopt-view.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
