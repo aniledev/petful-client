@@ -10,16 +10,16 @@ import Footer from "../components/navigation/Footer";
 class LandingView extends Component {
   render() {
     return (
-      <>
+      <div className="background">
         <Navbar />
-        <main class="container-md">
+        <main class="container-md landing">
           <LandingTitle />
           <LandingSubtitle />
           <LandingInstructions />
           <LandingForm />
         </main>
         <Footer />
-      </>
+      </div>
     );
   }
 }
