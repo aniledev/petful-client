@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class LandingTitle extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div class="d-flex justify-content-center mt-5 mb-5">
+        <h1 class="text-center landing-heading display-4">
+          Adopt today at First Come First Served Pet Adoption
+        </h1>
+      </div>
+    );
+  }
 }
