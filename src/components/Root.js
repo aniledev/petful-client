@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import "../styles/Root.css";
 import PetsView from "../pages/PetsView";
 import AdoptView from "../pages/AdoptView";
 import AboutView from "../pages/AboutView";
