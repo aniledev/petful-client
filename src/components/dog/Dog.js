@@ -5,11 +5,13 @@ import DogImage from "./DogImage";
 import DogInfo from "./DogInfo";
 
 export default class Dog extends Component {
-   // initialize state to hold fetch data for dogs
-   constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
-      
+      dogs: [],
+    };
+  }
+
     };
   }
   render() {
