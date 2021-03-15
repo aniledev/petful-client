@@ -62,6 +62,7 @@ class LandingForm extends Component {
           min="3"
           max="100"
           required
+          onChange={(e) => this.handleOnChange(e.target.value)}
         />
       </form>
     );
