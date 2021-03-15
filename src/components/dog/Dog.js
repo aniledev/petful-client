@@ -21,7 +21,7 @@ export default class Dog extends Component {
       redirect: "follow",
     };
 
-    fetch(`${config.PORT_URL}/api/dogs`, requestOptions)
+    fetch(`${config.REACT_APP_PORT_URL}/api/dogs`, requestOptions)
       // use chained promises to receive the data from the server
       .then((response) => response.json())
       .then((responseJSON) => this.setState({ dogs: responseJSON }))

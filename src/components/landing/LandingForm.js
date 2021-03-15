@@ -46,7 +46,7 @@ class LandingForm extends Component {
       redirect: "follow",
     };
 
-    fetch(`${config.PORT_URL}/api/people`, requestOptions)
+    fetch(`${config.REACT_APP_PORT_URL}/api/people`, requestOptions)
       // use chained promises to post the data to the server, no data is received from this POST
       .then((response) => response.json())
       .then((responseJSON) => console.log(responseJSON))

@@ -21,7 +21,7 @@ export default class Cat extends Component {
       redirect: "follow",
     };
 
-    fetch(`${config.PORT_URL}/api/cats`, requestOptions)
+    fetch(`http://localhost:8000/api/cats`, requestOptions)
       // use chained promises to receive the data from the server
       .then((response) => response.json())
       .then((responseJSON) => this.setState({ cats: responseJSON }))

@@ -19,7 +19,7 @@ export default class AdoptQueue extends Component {
       redirect: "follow",
     };
 
-    fetch(`${config.PORT_URL}/api/people`, requestOptions)
+    fetch(`${config.REACT_APP_PORT_URL}/api/people`, requestOptions)
       // use chained promises to receive the data from the server
       .then((response) => response.json())
       .then((responseJSON) => this.setState({ adopters: responseJSON }))
