@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import DogHeading from "./DogHeading";
 import DogImage from "./DogImage";
 import DogInfo from "./DogInfo";
-import PORT_URL from "../../config";
-
+import config from "../../config";
 export default class Dog extends Component {
   // initialize state to hold fetch data for dogs
   constructor(props) {
@@ -22,7 +21,7 @@ export default class Dog extends Component {
       redirect: "follow",
     };
 
-    fetch(`${PORT_URL}/api/dogs`, requestOptions)
+    fetch(`${config.PORT_URL}/api/dogs`, requestOptions)
       // use chained promises to receive the data from the server
       .then((response) => response.json())
       .then((result) => console.log(result))
