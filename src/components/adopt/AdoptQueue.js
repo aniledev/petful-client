@@ -23,16 +23,18 @@ export default class AdoptQueue extends Component {
     fetch(`${config.PORT_URL}/api/people`, requestOptions)
       // use chained promises to receive the data from the server
       .then((response) => response.json())
-      .then((result) => console.log(result))
+      .then((responseJSON) => this.setState({ adopters: responseJSON }))
       .catch((error) => console.log("error", error));
     // use this.setState to update this.state.adopters with response data
   }
 
   // add a timeout method that adopts a pet every 5 seconds, dequeue a person every 5sec
 
-  render() {
+  render () {
+    
+    const { adopters } = this.state;
+
     function queue() {
-      const adopters = STORE.people;
       let queue = "";
       for (let i = 0; i < adopters.length; i++) {
         if (i < adopters.length - 1) {
