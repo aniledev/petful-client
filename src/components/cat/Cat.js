@@ -24,7 +24,7 @@ export default class Cat extends Component {
     fetch(`${config.PORT_URL}/api/cats`, requestOptions)
       // use chained promises to receive the data from the server
       .then((response) => response.json())
-      .then((result) => console.log(result))
+      .then((responseJSON) => this.setState({ cats: responseJSON }))
       .catch((error) => console.log("error", error));
     // use this.setState to update state with response data
   }
