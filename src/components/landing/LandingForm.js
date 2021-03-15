@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PORT_URL from "../../config";
+import config from "../../config";
 
 class LandingForm extends Component {
   // initialize state to hold controlled form components
@@ -40,7 +40,7 @@ class LandingForm extends Component {
       redirect: "follow",
     };
 
-    fetch(`${PORT_URL}/api/people`, requestOptions)
+    fetch(`${config.PORT_URL}/api/people`, requestOptions)
       // use chained promises to post the data to the server, no data is received from this POST
       .then((response) => response.json())
       .then((result) => console.log(result))
