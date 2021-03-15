@@ -15,6 +15,11 @@ class LandingForm extends Component {
     this.setState({ name: name });
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+    this.addNameToQueue();
+  }
+
   // write method to validate the input box
   validateName() {
     // name cannot be empty upon submission
