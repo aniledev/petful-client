@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import STORE from "../../dummy-store";
-import PORT_URL from "../../config";
+import config from "../../config";
 
 export default class AdoptQueue extends Component {
   // initialize state to hold fetch data for adopters
@@ -20,7 +20,7 @@ export default class AdoptQueue extends Component {
       redirect: "follow",
     };
 
-    fetch(`${PORT_URL}/api/people`, requestOptions)
+    fetch(`${config.PORT_URL}/api/people`, requestOptions)
       // use chained promises to receive the data from the server
       .then((response) => response.json())
       .then((result) => console.log(result))
