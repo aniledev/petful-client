@@ -10,7 +10,7 @@ import Footer from "../components/navigation/Footer";
 class LandingView extends Component {
   render() {
     return (
-      <div className="background">
+      <div className="background pb-lg-5">
         <Navbar />
         <main className="container-md landing">
           <LandingTitle />

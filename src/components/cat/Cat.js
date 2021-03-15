@@ -16,7 +16,7 @@ export default class Cat extends Component {
   componentDidMount() {
     /* when the component is mounted, immediately preform a GET request to /api/cats 
        to receive cat image and cat info */
-
+    console.log(PORT_URL);
     const requestOptions = {
       method: "GET",
       redirect: "follow",
