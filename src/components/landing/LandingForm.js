@@ -11,9 +11,8 @@ class LandingForm extends Component {
   }
 
   // create an onChange of the input box update this.state.name
-  handleInputChange() {
-    // on change of event, this.setState with value from the input box
-    // trigger the addNameToQueue method to send this.state.name to the server to add to queue
+  handleOnChange(name) {
+    this.setState({ name: name });
   }
 
   // write method to validate the input box
