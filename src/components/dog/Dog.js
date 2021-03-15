@@ -36,13 +36,9 @@ export default class Dog extends Component {
   render() {
     return (
       <div className="col-md text-center">
-        <DogHeading />
-        {/* once this.state.dogs is updated, pass down description and 
-        imageUrl to dogImage component */}
-        <DogImage />
-        {/* once this.state.dogs is updated, pass down age, breed, gender, 
-        name and story to dogImage component */}
-        <DogInfo />
+        <DogHeading dogs={this.state.dogs} />
+        <DogImage dogs={this.state.dogs} />
+        <DogInfo dogs={this.state.dogs} />
         <div className="mb-5">
           {/* add event handler to button to trigger DELETE /api/dogs dequeue 
           a dog, this also will update the state*/}

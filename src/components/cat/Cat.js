@@ -36,13 +36,9 @@ export default class Cat extends Component {
   render() {
     return (
       <div className="col-md text-center">
-        <CatHeading />
-        <CatImage />
-        {/* once this.state.cats is updated, pass down description and 
-        imageUrl to CatImage component */}
-        <CatInfo />
-        {/* once this.state.cats is updated, pass down age, breed, gender,
-        name and story to CatImage component */}
+        <CatHeading cats={this.state.cats} />
+        <CatImage cats={this.state.cats} />
+        <CatInfo cats={this.state.cats} />
         <div className="mb-5">
           {/* add event handler to button to trigger DELETE /api/cats dequeue 
           a cat, this also will update the state*/}
