@@ -50,7 +50,10 @@ class LandingForm extends Component {
 
   render() {
     return (
-      <div className="d-flex justify-content-center input mb-5 pb-5">
+      <form
+        className="d-flex justify-content-center input mb-5 pb-5"
+        onSubmit={(e) => this.handleSubmit(e)}
+      >
         <input
           className="form-control form-control-lg name-input mb-2"
           type="text"
@@ -60,7 +63,7 @@ class LandingForm extends Component {
           max="100"
           required
         />
-      </div>
+      </form>
     );
   }
 }
