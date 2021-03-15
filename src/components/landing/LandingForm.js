@@ -30,24 +30,26 @@ class LandingForm extends Component {
 
   // write method that uses the POST/api/people to add the name to the list of adopters
   addNameToQueue() {
+    const { name } = this.state;
+
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    const newName = JSON.stringify({
-      name: "Elina",
+    const nameJSON = JSON.stringify({
+      name: name,
     });
 
-    var requestOptions = {
+    const requestOptions = {
       method: "POST",
       headers: myHeaders,
-      body: newName,
+      body: nameJSON,
       redirect: "follow",
     };
 
     fetch(`${config.PORT_URL}/api/people`, requestOptions)
       // use chained promises to post the data to the server, no data is received from this POST
       .then((response) => response.json())
-      .then((result) => console.log(result))
+      .then((responseJSON) => console.log(responseJSON))
       .catch((error) => console.log("error", error));
     // clear this.state.name once the POST request is successful
   }
