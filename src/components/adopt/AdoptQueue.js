@@ -29,9 +29,9 @@ export default class AdoptQueue extends Component {
 
   // add a timeout method that adopts a pet every 5 seconds, dequeue a person every 5sec
 
-  render () {
-    
+  render() {
     const { adopters } = this.state;
+    // change queue function to produce JSX elements that create an ordered list of names instead of paragraph of text
 
     function queue() {
       let queue = "";
