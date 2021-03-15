@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import STORE from "../../dummy-store";
 import config from "../../config";
 
 export default class AdoptQueue extends Component {
