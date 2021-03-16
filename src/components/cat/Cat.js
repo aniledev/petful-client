@@ -14,7 +14,8 @@ export default class Cat extends Component {
   }
 
   componentDidMount() {
-    /* when the component is mounted, immediately preform a GET request to /api/cats 
+    /* when the component is mounted, immediately preform a GET 
+    request to /api/cats 
        to receive cat image and cat info */
     const requestOptions = {
       method: "GET",
@@ -28,22 +29,23 @@ export default class Cat extends Component {
       .catch((error) => console.log("error", error));
     // use this.setState to update state with response data
   }
-
   // add a timeout method that adopts a dog every 5 seconds
-  /* add a conditional rendering that will disable the adopt button if 
-  it is not the users turn in the queue*/
+  /* add a conditional rendering that will disable the adopt button 
+  if it is not the users turn in the queue*/
 
   render() {
     const { cats } = this.state;
     // console.log(cats);
+    /* figure out how to access these props for the children 
+    components*/
     return (
       <div className="col-md text-center">
         <CatHeading cats={cats} />
         <CatImage cats={cats} />
         <CatInfo cats={cats} />
         <div className="mb-5">
-          {/* add event handler to button to trigger DELETE /api/cats dequeue 
-          a cat, this also will update the state*/}
+          {/* add event handler to button to trigger DELETE /api/cats 
+          dequeue a cat, this also will update the state*/}
           <button type="button" className="btn adopt-button">
             Adopt!
           </button>
