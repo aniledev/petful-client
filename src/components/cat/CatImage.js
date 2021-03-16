@@ -9,6 +9,13 @@ export default class CatImage extends Component {
     this.catCaretRight = this.catCaretRight.bind(this);
   }
 
+  catCaretLeft() {
+    console.log("left caret clicked");
+  }
+  catCaretRight() {
+    console.log("right caret clicked");
+  }
+
   render() {
     return (
       <div className="container">
