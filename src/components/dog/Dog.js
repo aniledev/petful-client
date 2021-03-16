@@ -11,6 +11,8 @@ export default class Dog extends Component {
       dogs: [],
     };
     this.handleClick = this.handleClick.bind(this);
+    this.handleGetDogs = this.handleGetDogs.bind(this);
+    this.dequeueDog = this.dequeueDog.bind(this);
   }
 
   componentDidMount() {
