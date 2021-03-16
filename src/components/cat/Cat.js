@@ -31,6 +31,17 @@ export default class Cat extends Component {
       .then((responseJSON) => this.setState({ cats: responseJSON }))
       .catch((error) => console.log("error", error));
     // use this.setState to update state with response data
+  dequeueCat() {
+    //use a DELETE HTTP request to the heroku server and dequeue a cat
+    const requestOptions = {
+      method: "DELETE",
+      redirect: "follow",
+    };
+
+    fetch(`${config.REACT_APP_PORT_URL}/api/cats`, requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.log("error", error));
   }
 
   handleClick() {
