@@ -16,6 +16,10 @@ export default class Dog extends Component {
   }
 
   componentDidMount() {
+    this.handleGetDogs();
+  }
+
+  handleGetDogs() {
     /* when the component is mounted, immediately preform a GET request to /api/cats 
        to receive cat image and cat info */
 
@@ -29,7 +33,7 @@ export default class Dog extends Component {
       .then((response) => response.json())
       .then((responseJSON) => this.setState({ dogs: responseJSON }))
       .catch((error) => console.log("error", error));
-    // use this.setState to update state with response data
+    console.log("dogs fetched");
   }
 
   handleClick() {
