@@ -34,7 +34,6 @@ export default class Dog extends Component {
       .then((response) => response.json())
       .then((responseJSON) => this.setState({ dogs: responseJSON }))
       .catch((error) => console.log("error", error));
-    console.log("dogs fetched");
   }
 
   dequeueDog() {
@@ -50,7 +49,6 @@ export default class Dog extends Component {
   }
 
   handleClick() {
-    console.log("button clicked!");
     // function needs to trigger a DELETE request using the server
     this.dequeueDog();
     // once the cat/dog is dequeued, it also needs to update the state with the new set of cats and dogs

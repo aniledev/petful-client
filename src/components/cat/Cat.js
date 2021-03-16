@@ -35,7 +35,6 @@ export default class Cat extends Component {
       .then((responseJSON) => this.setState({ cats: responseJSON }))
       .catch((error) => console.log("error", error));
     // use this.setState to update state with response data
-    console.log("cats fetched");
   }
 
   dequeueCat() {
@@ -52,8 +51,6 @@ export default class Cat extends Component {
   }
 
   handleClick() {
-    // when the button is clicked, an event listener needs to listen for the click
-    console.log("button clicked!");
     // when the event listener triggers it needs to trigger the DELETE request deletes the first animal from the queue
     this.dequeueCat();
     // once the first animal is deleted, state needs to be updated again using a GET request to api/cat
