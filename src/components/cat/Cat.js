@@ -32,7 +32,12 @@ export default class Cat extends Component {
   }
 
   handleClick() {
+    // when the button is clicked, an event listener needs to listen for the click
     console.log("button clicked!");
+    // when the event listener triggers it needs to trigger the DELETE request deletes the first animal from the queue
+    this.dequeueCat();
+    // once the first animal is deleted, state needs to be updated again using a GET request to api/cat
+    this.handleGetCats();
   }
 
   // add a timeout method that adopts a dog every 5 seconds
@@ -50,8 +55,6 @@ export default class Cat extends Component {
         <CatImage cats={cats} />
         <CatInfo cats={cats} />
         <div className="mb-5">
-          {/* add event handler to button to trigger DELETE /api/cats 
-          dequeue a cat, this also will update the state*/}
           <button
             type="button"
             className="btn adopt-button"
