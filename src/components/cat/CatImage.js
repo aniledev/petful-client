@@ -3,6 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 export default class CatImage extends Component {
+  constructor(props) {
+    super(props);
+    this.catCaretLeft = this.catCaretLeft.bind(this);
+    this.catCaretRight = this.catCaretRight.bind(this);
+  }
+
   render() {
     return (
       <div className="container">
