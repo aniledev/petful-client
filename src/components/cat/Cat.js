@@ -34,11 +34,13 @@ export default class Cat extends Component {
   it is not the users turn in the queue*/
 
   render() {
+    const { cats } = this.state;
+    // console.log(cats);
     return (
       <div className="col-md text-center">
-        <CatHeading cats={this.state.cats} />
-        <CatImage cats={this.state.cats} />
-        <CatInfo cats={this.state.cats} />
+        <CatHeading cats={cats} />
+        <CatImage cats={cats} />
+        <CatInfo cats={cats} />
         <div className="mb-5">
           {/* add event handler to button to trigger DELETE /api/cats dequeue 
           a cat, this also will update the state*/}
