@@ -17,6 +17,10 @@ export default class Cat extends Component {
   }
 
   componentDidMount() {
+    this.handleGetCats();
+  }
+
+  handleGetCats() {
     /* when the component is mounted, immediately preform a GET 
     request to /api/cats 
        to receive cat image and cat info */
@@ -31,6 +35,9 @@ export default class Cat extends Component {
       .then((responseJSON) => this.setState({ cats: responseJSON }))
       .catch((error) => console.log("error", error));
     // use this.setState to update state with response data
+    console.log("cats fetched");
+  }
+
   dequeueCat() {
     //use a DELETE HTTP request to the heroku server and dequeue a cat
     const requestOptions = {
