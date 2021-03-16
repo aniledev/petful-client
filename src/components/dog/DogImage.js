@@ -11,9 +11,13 @@ export default class DogImage extends Component {
 
   dogCaretLeft() {
     console.log("left caret clicked");
+    /* on click of the caret, the image needs to be conditionally rendered to show 
+    the next cat picture */
   }
   dogCaretRight() {
     console.log("right caret clicked");
+    /* on click of the caret, the image needs to be conditionally rendered to show 
+    the next cat picture */
   }
 
   render() {

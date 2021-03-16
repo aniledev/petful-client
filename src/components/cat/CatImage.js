@@ -11,9 +11,13 @@ export default class CatImage extends Component {
 
   catCaretLeft() {
     console.log("left caret clicked");
+    /* on click of the caret, the image needs to be conditionally rendered to show 
+    the next cat picture */
   }
   catCaretRight() {
     console.log("right caret clicked");
+     /* on click of the caret, the image needs to be conditionally rendered to show 
+    the next cat picture */
   }
 
   render() {
