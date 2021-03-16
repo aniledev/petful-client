@@ -8,7 +8,11 @@ export default class CatImage extends Component {
       <div className="container">
         <div className="row">
           <div className="col-2 my-auto">
-            <button type="button" className="btn btn-primary btn-sm caret">
+            <button
+              type="button"
+              className="btn btn-primary btn-sm caret"
+              onClick={this.catCaretLeft}
+            >
               <FontAwesomeIcon icon={faCaretLeft} className="caret-left" />
             </button>
           </div>
@@ -19,7 +23,11 @@ export default class CatImage extends Component {
             />
           </div>
           <div className="col-2 my-auto">
-            <button type="button" className="btn btn-primary btn-sm caret">
+            <button
+              type="button"
+              className="btn btn-primary btn-sm caret"
+              onClick={this.catCaretRight}
+            >
               <FontAwesomeIcon icon={faCaretRight} className="caret-right" />
             </button>
           </div>
