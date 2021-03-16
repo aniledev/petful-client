@@ -12,6 +12,8 @@ export default class Cat extends Component {
       cats: [],
     };
     this.handleClick = this.handleClick.bind(this);
+    this.handleGetCats = this.handleGetCats.bind(this);
+    this.dequeueCat = this.dequeueCat.bind(this);
   }
 
   componentDidMount() {
