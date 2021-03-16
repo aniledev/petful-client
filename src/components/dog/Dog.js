@@ -32,6 +32,12 @@ export default class Dog extends Component {
 
   handleClick() {
     console.log("button clicked!");
+    // function needs to trigger a DELETE request using the server
+    // once the cat/dog is dequeued, it also needs to update the state with the new set of cats and dogs
+    // this might be done best with context
+    // this.context.dequeueDog
+    // this would trigger the DELETE request to the server
+    // it would also update the context that holds the dogs and then pass that context back to the Dog component instead of using state, you could use context to update that information
   }
 
   // add a timeout method that adopts a dog every 5 seconds
