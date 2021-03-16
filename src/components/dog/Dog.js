@@ -10,6 +10,7 @@ export default class Dog extends Component {
     this.state = {
       dogs: [],
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -29,6 +30,10 @@ export default class Dog extends Component {
     // use this.setState to update state with response data
   }
 
+  handleClick() {
+    console.log("button clicked!");
+  }
+
   // add a timeout method that adopts a dog every 5 seconds
   /* add a conditional rendering that will disable the adopt button if 
   it is not the users turn in the queue*/
@@ -42,7 +47,11 @@ export default class Dog extends Component {
         <div className="mb-5">
           {/* add event handler to button to trigger DELETE /api/dogs dequeue 
           a dog, this also will update the state*/}
-          <button type="button" className="btn adopt-button">
+          <button
+            type="button"
+            className="btn adopt-button"
+            onClick={this.handleClick}
+          >
             Adopt!
           </button>
         </div>
