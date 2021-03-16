@@ -3,6 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 export default class DogImage extends Component {
+  constructor(props) {
+    super(props);
+    this.dogCaretLeft = this.dogCaretLeft.bind(this);
+    this.dogCaretRight = this.dogCaretRight.bind(this);
+  }
 
   dogCaretLeft() {
     console.log("left caret clicked");
