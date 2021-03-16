@@ -3,6 +3,7 @@ import DogHeading from "./DogHeading";
 import DogImage from "./DogImage";
 import DogInfo from "./DogInfo";
 import config from "../../config";
+
 export default class Dog extends Component {
   // initialize state to hold fetch data for dogs
   constructor(props) {
@@ -34,6 +35,18 @@ export default class Dog extends Component {
       .then((responseJSON) => this.setState({ dogs: responseJSON }))
       .catch((error) => console.log("error", error));
     console.log("dogs fetched");
+  }
+
+  dequeueDog() {
+    const requestOptions = {
+      method: "DELETE",
+      redirect: "follow",
+    };
+
+    fetch(`${config.REACT_APP_PORT_URL}/api/dogs`, requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.log("error", error));
   }
 
   handleClick() {
