@@ -34,7 +34,7 @@ export default class Cat extends Component {
       // use chained promises to receive the data from the server
       .then((response) => response.json())
       .then((responseJSON) => this.setState({ cats: responseJSON }))
-      .catch((error) => console.log("error", error));
+      .catch((err) => this.setState({ error: err }));
     // use this.setState to update state with response data
   }
 
@@ -48,6 +48,7 @@ export default class Cat extends Component {
     fetch(`${config.REACT_APP_PORT_URL}/api/cats`, requestOptions)
       .then((response) => response.text())
       .then((json) => this.setState({ cats: json }))
+      .catch((err) => this.setState({ error: err }));
   }
 
   handleClick() {
