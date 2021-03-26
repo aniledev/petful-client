@@ -44,7 +44,7 @@ export default class Dog extends Component {
     };
 
     fetch(`${config.REACT_APP_PORT_URL}/api/dogs`, requestOptions)
-      .then((response) => response.text())
+      .then((response) => response.json())
       .then((json) => this.setState({ dogs: json }))
       .catch((err) => this.setState({ error: err }));
   }

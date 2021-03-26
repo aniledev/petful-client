@@ -46,7 +46,7 @@ export default class Cat extends Component {
     };
 
     fetch(`${config.REACT_APP_PORT_URL}/api/cats`, requestOptions)
-      .then((response) => response.text())
+      .then((response) => response.json())
       .then((json) => this.setState({ cats: json }))
       .catch((err) => this.setState({ error: err }));
   }
