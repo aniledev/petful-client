@@ -18,6 +18,7 @@ class LandingForm extends Component {
   handleSubmit(event) {
     event.preventDefault();
     this.addNameToQueue();
+    this.props.history.push("/adopt");
   }
 
   // write method to validate the input box

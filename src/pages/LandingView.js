@@ -16,7 +16,7 @@ class LandingView extends Component {
           <LandingTitle />
           <LandingSubtitle />
           <LandingInstructions />
-          <LandingForm />
+          <LandingForm history={this.props.history} />
         </main>
         <Footer />
       </div>
