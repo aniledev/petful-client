@@ -16,11 +16,15 @@ export default class CatImage extends Component {
   }
   catCaretRight() {
     console.log("right caret clicked");
-     /* on click of the caret, the image needs to be conditionally rendered to show 
+    /* on click of the caret, the image needs to be conditionally rendered to show 
     the next cat picture */
   }
 
   render() {
+    const firstCat = this.props.cats[0];
+    const image = firstCat["imageURL"];
+    const description = firstCat["description"];
+
     return (
       <div className="container">
         <div className="row">
@@ -34,10 +38,7 @@ export default class CatImage extends Component {
             </button>
           </div>
           <div className="col-8">
-            <img
-              src="https://images.unsplash.com/photo-1598463166261-357c23778812?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1410&q=80"
-              alt="A smiling golden-brown golden retriever listening to music"
-            />
+            <img src={image} alt={description} />
           </div>
           <div className="col-2 my-auto">
             <button
