@@ -61,11 +61,17 @@ export default class Dog extends Component {
   it is not the users turn in the queue*/
 
   render() {
+    const { dogs } = this.state;
+
+    if (dogs.length === 0) {
+      return <p>Loading Information</p>;
+    }
+
     return (
       <div className="col-md text-center">
-        <DogHeading dogs={this.state.dogs} />
-        <DogImage dogs={this.state.dogs} />
-        <DogInfo dogs={this.state.dogs} />
+        <DogHeading dogs={dogs} />
+        <DogImage dogs={dogs} />
+        <DogInfo dogs={dogs} />
         <div className="mb-5">
           {/* add event handler to button to trigger DELETE /api/dogs dequeue 
           a dog, this also will update the state*/}

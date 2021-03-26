@@ -64,9 +64,11 @@ export default class Cat extends Component {
 
   render() {
     const { cats } = this.state;
-    // console.log(cats);
-    /* figure out how to access these props for the children 
-    components*/
+
+    if (cats.length === 0) {
+      return <p>Loading Information</p>;
+    }
+
     return (
       <div className="col-md text-center">
         <CatHeading cats={cats} />
