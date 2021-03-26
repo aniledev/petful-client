@@ -54,7 +54,7 @@ export default class Dog extends Component {
     this.dequeueDog();
     // once the cat/dog is dequeued, it also needs to update the state with the new set of cats and dogs
     this.handleGetDogs();
-    alert("You're now a proud cat parent!");
+    alert("You're now a proud dog parent!");
   }
 
   // add a timeout method that adopts a dog every 5 seconds
