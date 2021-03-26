@@ -55,6 +55,7 @@ export default class Cat extends Component {
     this.dequeueCat();
     // once the first animal is deleted, state needs to be updated again using a GET request to api/cat
     this.handleGetCats();
+    alert("You're now a proud cat parent!");
   }
 
   // add a timeout method that adopts a dog every 5 seconds
