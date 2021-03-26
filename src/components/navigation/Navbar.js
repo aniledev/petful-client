@@ -6,7 +6,7 @@ export default class NavBar extends Component {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <div className="nav-bar-left">
-            <a className="navbar-brand brand-title" href="/index.html">
+            <a className="navbar-brand brand-title" href="/">
               First Come First Served Pet Adoption
             </a>
             <button
@@ -27,16 +27,16 @@ export default class NavBar extends Component {
             id="navbarNavAltMarkup"
           >
             <div className="navbar-nav">
-              <a className="nav-link" href="/features.html">
+              <a className="nav-link" href="/">
                 Home
               </a>
-              <a className="nav-link" href="/about.html">
+              <a className="nav-link" href="/about">
                 About
               </a>
-              <a className="nav-link" href="/about.html">
+              <a className="nav-link" href="/pets">
                 Pets
               </a>
-              <a className="nav-link" href="/contact.html">
+              <a className="nav-link" href="/contact">
                 Contact Us
               </a>
             </div>
