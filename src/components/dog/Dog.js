@@ -10,6 +10,7 @@ export default class Dog extends Component {
     super(props);
     this.state = {
       dogs: [],
+      error: null,
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleGetDogs = this.handleGetDogs.bind(this);
@@ -33,7 +34,7 @@ export default class Dog extends Component {
       // use chained promises to receive the data from the server
       .then((response) => response.json())
       .then((responseJSON) => this.setState({ dogs: responseJSON }))
-      .catch((error) => console.log("error", error));
+      .catch((err) => this.setState({ error: err }));
   }
 
   dequeueDog() {
@@ -44,8 +45,8 @@ export default class Dog extends Component {
 
     fetch(`${config.REACT_APP_PORT_URL}/api/dogs`, requestOptions)
       .then((response) => response.text())
-      .then((result) => console.log(result))
-      .catch((error) => console.log("error", error));
+      .then((json) => this.setState({ dogs: json }))
+      .catch((err) => this.setState({ error: err }));
   }
 
   handleClick() {

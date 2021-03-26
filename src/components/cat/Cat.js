@@ -10,6 +10,7 @@ export default class Cat extends Component {
     super(props);
     this.state = {
       cats: [],
+      error: null,
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleGetCats = this.handleGetCats.bind(this);
@@ -46,8 +47,7 @@ export default class Cat extends Component {
 
     fetch(`${config.REACT_APP_PORT_URL}/api/cats`, requestOptions)
       .then((response) => response.text())
-      .then((result) => console.log(result))
-      .catch((error) => console.log("error", error));
+      .then((json) => this.setState({ cats: json }))
   }
 
   handleClick() {
