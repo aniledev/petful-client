@@ -15,7 +15,9 @@ class LandingForm extends Component {
 
   // create an onChange of the input box update this.state.name
   handleOnChange(name) {
-    this.setState({ name: name });
+    this.setState({
+      name: { value: name, changed: true },
+    });
   }
 
   handleSubmit(event) {
