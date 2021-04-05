@@ -27,11 +27,11 @@ class LandingForm extends Component {
   }
 
   // write method to validate the input box
-  validateName() {
-    // name cannot be empty upon submission
-    // name must contain at least 3 characters
-    // name cannot contain more than 100 characters
-    // use the validateName function to disable submission of the form
+  validateUserInput() {
+    const name = this.state.name.value.trim();
+    // if name is not entered, return "A name is required"
+    // if name.length < 3, return "Name must be at least 3 characters"
+    // if name.length > 100, return "Name must not exceed 100 characters"
   }
 
   // write method that uses the POST/api/people to add the name to the list of adopters
@@ -61,6 +61,8 @@ class LandingForm extends Component {
   }
 
   render() {
+    const nameInputError = this.validateUserInput();
+
     return (
       <form
         className="d-flex justify-content-center input mb-5 pb-5"
@@ -76,6 +78,17 @@ class LandingForm extends Component {
           required
           onChange={(e) => this.handleOnChange(e.target.value)}
         />
+        {this.state.name.changed && (
+          <ValidationError message={nameInputError} />
+        )}
+        {/* add JSX button element with type, className, and disabled attributes this.validateUserInput() */}
+        <button
+          type="submit"
+          className="submit-button"
+          disabled={this.validateUserInput()}
+        >
+          Join Queue
+        </button>
       </form>
     );
   }
