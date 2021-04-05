@@ -30,9 +30,15 @@ class LandingForm extends Component {
   // write method to validate the input box
   validateUserInput() {
     const name = this.state.name.value.trim();
-    // if name is not entered, return "A name is required"
-    // if name.length < 3, return "Name must be at least 3 characters"
-    // if name.length > 100, return "Name must not exceed 100 characters"
+    if (!name) {
+      return "A name is required.";
+    }
+    if (name.length < 3) {
+      return "Name must be at least 3 characters.";
+    }
+    if (name.length > 100) {
+      return "Name must not exceed 100 characters.";
+    }
   }
 
   // write method that uses the POST/api/people to add the name to the list of adopters
