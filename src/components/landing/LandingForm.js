@@ -6,7 +6,10 @@ class LandingForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
+      name: {
+        value: "",
+        changed: false,
+      },
     };
   }
 
