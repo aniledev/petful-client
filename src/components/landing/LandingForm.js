@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import config from "../../config";
+import ValidationError from "../../ValidationError";
 
 class LandingForm extends Component {
   // initialize state to hold controlled form components
