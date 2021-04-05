@@ -66,30 +66,36 @@ class LandingForm extends Component {
 
     return (
       <form
-        className="d-flex justify-content-center input mb-5 pb-5"
+        className="justify-content-center input mb-5 pb-5"
         onSubmit={(e) => this.handleSubmit(e)}
       >
-        <input
-          className="form-control form-control-lg name-input mb-2"
-          type="text"
-          placeholder="Enter your name to join the queue"
-          aria-label="Enter your name to join the queue"
-          min="3"
-          max="100"
-          required
-          onChange={(e) => this.handleOnChange(e.target.value)}
-        />
+        <div className="d-flex justify-content-center">
+          <input
+            className="form-control form-control-lg name-input mb-2"
+            type="text"
+            placeholder="Enter your name to join the queue"
+            aria-label="Enter your name to join the queue"
+            min="3"
+            max="100"
+            required
+            onChange={(e) => this.handleOnChange(e.target.value)}
+          />
+        </div>
+
         {this.state.name.changed && (
           <ValidationError message={nameInputError} />
         )}
         {/* add JSX button element with type, className, and disabled attributes this.validateUserInput() */}
-        <button
-          type="submit"
-          className="submit-button"
-          disabled={this.validateUserInput()}
-        >
-          Join Queue
-        </button>
+
+        <div className="d-flex justify-content-center">
+          <button
+            type="submit"
+            className="submit-button btn btn-danger"
+            disabled={this.validateUserInput()}
+          >
+            Join Queue
+          </button>
+        </div>
       </form>
     );
   }
