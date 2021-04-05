@@ -87,12 +87,9 @@ class LandingForm extends Component {
             onChange={(e) => this.handleOnChange(e.target.value)}
           />
         </div>
-
         {this.state.name.changed && (
           <ValidationError message={nameInputError} />
         )}
-        {/* add JSX button element with type, className, and disabled attributes this.validateUserInput() */}
-
         <div className="d-flex justify-content-center">
           <button
             type="submit"
