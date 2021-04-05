@@ -36,7 +36,7 @@ class LandingForm extends Component {
 
   // write method that uses the POST/api/people to add the name to the list of adopters
   addNameToQueue() {
-    const { name } = this.state;
+    const name = this.state.name.value;
 
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
