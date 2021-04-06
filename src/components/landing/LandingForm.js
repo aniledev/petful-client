@@ -19,9 +19,10 @@ class LandingForm extends Component {
 
   // create an onChange of the input box update this.state.name
   handleOnChange(name) {
-    this.setState({
-      name: { value: name, changed: true },
-    });
+    // this.setState({
+    //   name: { value: name, changed: true },
+    // });
+    this.context.handleOnChange(name);
   }
 
   handleSubmit(event) {
@@ -32,7 +33,7 @@ class LandingForm extends Component {
 
   // write method to validate the input box
   validateUserInput() {
-    const name = this.state.name.value.trim();
+    const name = this.context.name.trim();
     if (!name) {
       return "A name is required.";
     }
@@ -46,7 +47,7 @@ class LandingForm extends Component {
 
   // write method that uses the POST/api/people to add the name to the list of adopters
   addNameToQueue() {
-    const name = this.state.name.value;
+    const name = this.context.name.trim();
 
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -90,9 +91,7 @@ class LandingForm extends Component {
             onChange={(e) => this.handleOnChange(e.target.value)}
           />
         </div>
-        {this.state.name.changed && (
-          <ValidationError message={nameInputError} />
-        )}
+        {this.context.changed && <ValidationError message={nameInputError} />}
         <div className="d-flex justify-content-center">
           <button
             type="submit"
