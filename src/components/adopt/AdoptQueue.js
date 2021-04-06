@@ -24,7 +24,7 @@ export default class AdoptQueue extends Component {
       // use chained promises to receive the data from the server
       .then((response) => response.json())
       .then((responseJSON) => this.setState({ adopters: responseJSON }))
-      .catch((error) => console.log("error", error));
+      .catch((err) => this.setState({ error: err }));
     // use this.setState to update this.state.adopters with response data
   }
 
