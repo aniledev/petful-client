@@ -50,3 +50,7 @@ img {
   border-color: #1c1e22 !important;
   color: whitesmoke !important;
 }
+
+.confirmation {
+  color: green;
+}
