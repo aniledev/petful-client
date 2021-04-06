@@ -26,7 +26,23 @@ export default class Root extends Component {
       .then((response) => response.json())
       .then((responseJSON) => this.setState({ adopters: responseJSON }))
       .catch((err) => this.setState({ error: err }));
+
+    setInterval(() => {
+      this.dequeuePerson();
+    }, 5000);
   }
+
+  dequeuePerson = () => {
+    const requestOptions = {
+      method: "DELETE",
+      redirect: "follow",
+    };
+
+    fetch(`${config.REACT_APP_PORT_URL}/api/people`, requestOptions)
+      .then((response) => response.json())
+      .then((json) => this.setState({ adopters: json }))
+      .catch((err) => this.setState({ error: err }));
+  };
 
   render() {
     const value = {
