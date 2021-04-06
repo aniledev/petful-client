@@ -7,6 +7,7 @@ export default class AdoptQueue extends Component {
     super(props);
     this.state = {
       adopters: [],
+      error: null,
     };
   }
 
