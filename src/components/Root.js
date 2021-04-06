@@ -46,7 +46,18 @@ export default class Root extends Component {
       .catch((err) => this.setState({ adopterError: err }));
   };
 
-  dequeueCat = () => {};
+  dequeueCat = () => {
+    //use a DELETE HTTP request to the heroku server and dequeue a cat
+    const requestOptions = {
+      method: "DELETE",
+      redirect: "follow",
+    };
+
+    fetch(`${config.REACT_APP_PORT_URL}/api/cats`, requestOptions)
+      .then((response) => response.json())
+      .then((json) => this.setState({ cats: json }))
+      .catch((err) => this.setState({ catError: err }));
+  };
 
   handleGetCats = () => {
     /* when the component is mounted, immediately preform a GET
