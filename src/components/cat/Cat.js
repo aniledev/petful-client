@@ -71,6 +71,14 @@ export default class Cat extends Component {
     console.log("This.state.clicked === true");
   }
 
+  confirmAdoption() {
+    const clicked = this.state.clicked;
+    if (clicked === true) {
+      console.log("state changed to true");
+      return "You're now a proud pet parent!";
+    }
+  }
+
   // add a timeout method that adopts a dog every 5 seconds
   /* add a conditional rendering that will disable the adopt button 
   if it is not the users turn in the queue*/
