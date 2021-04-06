@@ -11,6 +11,10 @@ import config from "../config";
 
 export default class Root extends Component {
   state = {
+    name: {
+      value: "",
+      changed: false,
+    },
     adopters: [],
     cats: [],
     dogs: [],
@@ -101,8 +105,18 @@ export default class Root extends Component {
       .catch((err) => this.setState({ dogError: err }));
   };
 
+  handleOnChange = (name) => {
+    this.setState({
+      name: { value: name, changed: true },
+    });
+  };
+
   render() {
     const value = {
+      name: {
+        value: "",
+        changed: false,
+      },
       adopters: this.state.adopters,
       cats: this.state.cats,
       dogs: this.state.dogs,
@@ -114,6 +128,7 @@ export default class Root extends Component {
       dequeueDog: this.dequeueDog,
       handleGetCats: this.handleGetCats,
       handleGetDogs: this.handleGetDogs,
+      handleOnChange: this.handleOnChange,
     };
 
     return (

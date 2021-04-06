@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import config from "../../config";
+import context from "../../context";
 import ValidationError from "../ValidationError";
 
 class LandingForm extends Component {
@@ -13,6 +14,8 @@ class LandingForm extends Component {
       },
     };
   }
+
+  static contextType = context;
 
   // create an onChange of the input box update this.state.name
   handleOnChange(name) {
