@@ -4,5 +4,8 @@ import React from "react";
 
 export default React.createContext({
   // empty update functions
-  handleAdoptClick: () => {},
+  adopters: [],
+  error: null,
+  dequeuePerson: () => {},
+  // handleAdoptClick: () => {},
 });
