@@ -11,13 +11,9 @@ export default class Dog extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // dogs: [],
-      // error: null,
       clicked: false,
     };
     this.handleClick = this.handleClick.bind(this);
-    // this.handleGetDogs = this.handleGetDogs.bind(this);
-    // this.dequeueDog = this.dequeueDog.bind(this);
   }
 
   static contextType = context;
@@ -35,35 +31,6 @@ export default class Dog extends Component {
       this.context.handleGetDogs();
     }, 5000);
   }
-
-  // handleGetDogs() {
-  //   /* when the component is mounted, immediately preform a GET request to /api/cats
-  //      to receive cat image and cat info */
-
-  //   const requestOptions = {
-  //     method: "GET",
-  //     redirect: "follow",
-  //   };
-
-  //   fetch(`${config.REACT_APP_PORT_URL}/api/dogs`, requestOptions)
-  //     // use chained promises to receive the data from the server
-  //     .then((response) => response.json())
-  //     .then((responseJSON) => this.setState({ dogs: responseJSON }))
-  //     .catch((err) => this.setState({ error: err }));
-  // }
-  /*
-  dequeueDog() {
-    const requestOptions = {
-      method: "DELETE",
-      redirect: "follow",
-    };
-
-    fetch(`${config.REACT_APP_PORT_URL}/api/dogs`, requestOptions)
-      .then((response) => response.json())
-      .then((json) => this.setState({ dogs: json }))
-      .catch((err) => this.setState({ error: err }));
-  }
-*/
 
   handleClick() {
     // update clicked state

@@ -74,8 +74,7 @@ export default class Root extends Component {
   };
 
   handleGetCats = () => {
-    /* when the component is mounted, immediately preform a GET
-     request to /api/cats to receive cat image and cat info */
+    /* preform a GET request to /api/cats to receive cat image and cat info */
     const requestOptions = {
       method: "GET",
       redirect: "follow",

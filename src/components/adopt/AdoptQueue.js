@@ -6,10 +6,7 @@ export default class AdoptQueue extends Component {
   // initialize state to hold fetch data for adopters
   constructor(props) {
     super(props);
-    this.state = {
-      // adopters: [],
-      // error: null,
-    };
+    this.state = {};
   }
 
   static contextType = context;
@@ -18,43 +15,8 @@ export default class AdoptQueue extends Component {
     this.context.dequeuePerson();
   }
 
-  // componentDidMount() {
-  //   /* when the component is mounted, immediately preform a GET request to /api/people
-  //      to receive adopters in the queue*/
-
-  //   const requestOptions = {
-  //     method: "GET",
-  //     redirect: "follow",
-  //   };
-
-  //   fetch(`${config.REACT_APP_PORT_URL}/api/people`, requestOptions)
-  //     // use chained promises to receive the data from the server
-  //     .then((response) => response.json())
-  //     .then((responseJSON) => this.setState({ adopters: responseJSON }))
-  //     .catch((err) => this.setState({ error: err }));
-
-  //   setInterval(() => {
-  //     this.dequeuePerson();
-  //   }, 5000);
-  // }
-
-  // // write method that uses DELETE request to the server to dequeue a person
-  // dequeuePerson() {
-  //   const requestOptions = {
-  //     method: "DELETE",
-  //     redirect: "follow",
-  //   };
-
-  //   fetch(`${config.REACT_APP_PORT_URL}/api/people`, requestOptions)
-  //     .then((response) => response.json())
-  //     .then((json) => this.setState({ adopters: json }))
-  //     .catch((err) => this.setState({ error: err }));
-  // }
-
   render() {
-    // const { adopters } = this.state;
     const { adopters } = this.context;
-    // change queue function to produce JSX elements that create an ordered list of names instead of paragraph of text
 
     function queue() {
       let queue = "";

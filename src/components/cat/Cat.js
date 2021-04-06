@@ -11,13 +11,9 @@ export default class Cat extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // cats: [],
-      // error: null,
       clicked: false,
     };
     this.handleClick = this.handleClick.bind(this);
-    // this.handleGetCats = this.handleGetCats.bind(this);
-    // this.dequeueCat = this.dequeueCat.bind(this);
   }
 
   static contextType = context;
@@ -35,37 +31,6 @@ export default class Cat extends Component {
       this.context.handleGetCats();
     }, 5000);
   }
-
-  // handleGetCats() {
-  //   /* when the component is mounted, immediately preform a GET
-  //   request to /api/cats to receive cat image and cat info */
-  //   const requestOptions = {
-  //     method: "GET",
-  //     redirect: "follow",
-  //   };
-
-  //   fetch(`${config.REACT_APP_PORT_URL}/api/cats`, requestOptions)
-  //     // use chained promises to receive the data from the server
-  //     .then((response) => response.json())
-  //     .then((responseJSON) => this.setState({ cats: responseJSON }))
-  //     .catch((err) => this.setState({ error: err }));
-  //   // use this.setState to update state with response data
-  // }
-
-  /*
-  dequeueCat() {
-    //use a DELETE HTTP request to the heroku server and dequeue a cat
-    const requestOptions = {
-      method: "DELETE",
-      redirect: "follow",
-    };
-
-    fetch(`${config.REACT_APP_PORT_URL}/api/cats`, requestOptions)
-      .then((response) => response.json())
-      .then((json) => this.setState({ cats: json }))
-      .catch((err) => this.setState({ error: err }));
-  }
-*/
 
   handleClick() {
     // update clicked state
