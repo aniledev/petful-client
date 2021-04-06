@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import config from "../../config";
+// import config from "../../config";
 import context from "../../context";
 
 export default class AdoptQueue extends Component {
@@ -8,11 +8,15 @@ export default class AdoptQueue extends Component {
     super(props);
     this.state = {
       // adopters: [],
-      error: null,
+      // error: null,
     };
   }
 
   static contextType = context;
+
+  componentDidMount() {
+    this.context.dequeuePerson();
+  }
 
   // componentDidMount() {
   //   /* when the component is mounted, immediately preform a GET request to /api/people
@@ -34,18 +38,18 @@ export default class AdoptQueue extends Component {
   //   }, 5000);
   // }
 
-  // write method that uses DELETE request to the server to dequeue a person
-  dequeuePerson() {
-    const requestOptions = {
-      method: "DELETE",
-      redirect: "follow",
-    };
+  // // write method that uses DELETE request to the server to dequeue a person
+  // dequeuePerson() {
+  //   const requestOptions = {
+  //     method: "DELETE",
+  //     redirect: "follow",
+  //   };
 
-    fetch(`${config.REACT_APP_PORT_URL}/api/people`, requestOptions)
-      .then((response) => response.json())
-      .then((json) => this.setState({ adopters: json }))
-      .catch((err) => this.setState({ error: err }));
-  }
+  //   fetch(`${config.REACT_APP_PORT_URL}/api/people`, requestOptions)
+  //     .then((response) => response.json())
+  //     .then((json) => this.setState({ adopters: json }))
+  //     .catch((err) => this.setState({ error: err }));
+  // }
 
   render() {
     // const { adopters } = this.state;
