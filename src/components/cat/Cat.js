@@ -12,6 +12,7 @@ export default class Cat extends Component {
     this.state = {
       cats: [],
       error: null,
+      clicked: false,
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleGetCats = this.handleGetCats.bind(this);
