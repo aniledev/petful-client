@@ -21,6 +21,16 @@ export default class Dog extends Component {
 
   componentDidMount() {
     this.handleGetDogs();
+    this.interval();
+  }
+
+  // write a function that triggers setInterval to dequeue a cat and also handlesGetCats to update the state
+  interval() {
+    setInterval(() => {
+      console.log("dog adopted!");
+      this.dequeueDog();
+      this.handleGetDogs();
+    }, 5000);
   }
 
   handleGetDogs() {
@@ -63,19 +73,16 @@ export default class Dog extends Component {
     }, 3000);
   }
 
-  // add a timeout method that adopts a dog every 5 seconds
   /* add a conditional rendering that will disable the adopt button if 
   it is not the users turn in the queue*/
 
   handleClickState() {
     this.setState({ clicked: true });
-    console.log("This.state.clicked === true");
   }
 
   confirmAdoption() {
     const clicked = this.state.clicked;
     if (clicked === true) {
-      console.log("state changed to true");
       return "You're now a proud pet parent!";
     }
   }
@@ -84,7 +91,7 @@ export default class Dog extends Component {
     const { dogs } = this.state;
 
     if (dogs.length === 0) {
-      return <p>Loading Information</p>;
+      return <p className="col-md text-center">Loading Information</p>;
     }
 
     const clicked = this.state.clicked;
