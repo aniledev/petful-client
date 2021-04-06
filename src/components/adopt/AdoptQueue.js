@@ -33,7 +33,18 @@ export default class AdoptQueue extends Component {
     }, 3000);
   }
 
-  // add a timeout method that adopts a pet every 5 seconds, dequeue a person every 5sec
+  // write method that uses DELETE request to the server to dequeue a person
+  dequeuePerson() {
+    const requestOptions = {
+      method: "DELETE",
+      redirect: "follow",
+    };
+
+    fetch(`${config.REACT_APP_PORT_URL}/api/people`, requestOptions)
+      .then((response) => response.json())
+      .then((json) => this.setState({ adopters: json }))
+      .catch((err) => this.setState({ error: err }));
+  }
 
   render() {
     const { adopters } = this.state;
