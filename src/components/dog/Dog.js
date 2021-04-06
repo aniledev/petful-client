@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import DogHeading from "./DogHeading";
 import DogImage from "./DogImage";
 import DogInfo from "./DogInfo";
-import AdoptionConfirmation from "../../AdoptionConfirmation";
+import AdoptionConfirmation from "../AdoptionConfirmation";
 import config from "../../config";
 
 export default class Dog extends Component {
