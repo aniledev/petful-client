@@ -65,6 +65,10 @@ export default class Cat extends Component {
       this.setState({ clicked: false });
     }, 3000);
   }
+
+  handleClickState() {
+    this.setState({ clicked: true });
+    console.log("This.state.clicked === true");
   }
 
   // add a timeout method that adopts a dog every 5 seconds
