@@ -25,11 +25,10 @@ export default class AdoptQueue extends Component {
       .then((response) => response.json())
       .then((responseJSON) => this.setState({ adopters: responseJSON }))
       .catch((err) => this.setState({ error: err }));
-    // use this.setState to update this.state.adopters with response data
 
     setInterval(() => {
       this.dequeuePerson();
-    }, 3000);
+    }, 5000);
   }
 
   // write method that uses DELETE request to the server to dequeue a person
