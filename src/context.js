@@ -5,11 +5,15 @@ import React from "react";
 export default React.createContext({
   // empty update functions
   adopters: [],
-  adopterError: null,
   cats: [],
-  error: null,
+  dogs: [],
+  adopterError: null,
+  catError: null,
+  dogError: null,
   dequeuePerson: () => {},
   dequeueCat: () => {},
+  dequeueDog: () => {},
   handleGetCats: () => {},
+  handleGetDogs: () => {},
   // handleAdoptClick: () => {},
 });
