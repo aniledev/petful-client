@@ -113,10 +113,8 @@ export default class Root extends Component {
 
   render() {
     const value = {
-      name: {
-        value: "",
-        changed: false,
-      },
+      name: this.state.name.value,
+      changed: this.state.name.changed,
       adopters: this.state.adopters,
       cats: this.state.cats,
       dogs: this.state.dogs,
