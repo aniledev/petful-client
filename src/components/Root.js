@@ -61,7 +61,17 @@ export default class Root extends Component {
       .catch((err) => this.setState({ catError: err }));
   };
 
-  dequeueDog = () => {};
+  dequeueDog = () => {
+    const requestOptions = {
+      method: "DELETE",
+      redirect: "follow",
+    };
+
+    fetch(`${config.REACT_APP_PORT_URL}/api/dogs`, requestOptions)
+      .then((response) => response.json())
+      .then((json) => this.setState({ dogs: json }))
+      .catch((err) => this.setState({ dogError: err }));
+  };
 
   handleGetCats = () => {
     /* when the component is mounted, immediately preform a GET

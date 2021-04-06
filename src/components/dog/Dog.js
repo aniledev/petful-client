@@ -3,7 +3,7 @@ import DogHeading from "./DogHeading";
 import DogImage from "./DogImage";
 import DogInfo from "./DogInfo";
 import AdoptionConfirmation from "../AdoptionConfirmation";
-import config from "../../config";
+// import config from "../../config";
 import context from "../../context";
 
 export default class Dog extends Component {
@@ -11,13 +11,13 @@ export default class Dog extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dogs: [],
-      error: null,
+      // dogs: [],
+      // error: null,
       clicked: false,
     };
     this.handleClick = this.handleClick.bind(this);
     // this.handleGetDogs = this.handleGetDogs.bind(this);
-    this.dequeueDog = this.dequeueDog.bind(this);
+    // this.dequeueDog = this.dequeueDog.bind(this);
   }
 
   static contextType = context;
@@ -31,7 +31,7 @@ export default class Dog extends Component {
   interval() {
     setInterval(() => {
       console.log("dog adopted!");
-      this.dequeueDog();
+      this.context.dequeueDog();
       this.context.handleGetDogs();
     }, 5000);
   }
@@ -51,7 +51,7 @@ export default class Dog extends Component {
   //     .then((responseJSON) => this.setState({ dogs: responseJSON }))
   //     .catch((err) => this.setState({ error: err }));
   // }
-
+  /*
   dequeueDog() {
     const requestOptions = {
       method: "DELETE",
@@ -63,12 +63,13 @@ export default class Dog extends Component {
       .then((json) => this.setState({ dogs: json }))
       .catch((err) => this.setState({ error: err }));
   }
+*/
 
   handleClick() {
     // update clicked state
     this.handleClickState();
     // function needs to trigger a DELETE request using the server
-    this.dequeueDog();
+    this.context.dequeueDog();
     // once the cat/dog is dequeued, it also needs to update the state with the new set of cats and dogs
     this.context.handleGetDogs();
     setTimeout(() => {
