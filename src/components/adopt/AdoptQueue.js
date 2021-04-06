@@ -26,6 +26,11 @@ export default class AdoptQueue extends Component {
       .then((responseJSON) => this.setState({ adopters: responseJSON }))
       .catch((err) => this.setState({ error: err }));
     // use this.setState to update this.state.adopters with response data
+
+    setInterval(() => {
+      this.dequeuePerson();
+      console.log("person dequeued!");
+    }, 3000);
   }
 
   // add a timeout method that adopts a pet every 5 seconds, dequeue a person every 5sec
