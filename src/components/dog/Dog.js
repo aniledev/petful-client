@@ -4,6 +4,7 @@ import DogImage from "./DogImage";
 import DogInfo from "./DogInfo";
 import AdoptionConfirmation from "../AdoptionConfirmation";
 import config from "../../config";
+import context from "../../context";
 
 export default class Dog extends Component {
   // initialize state to hold fetch data for dogs
@@ -15,12 +16,14 @@ export default class Dog extends Component {
       clicked: false,
     };
     this.handleClick = this.handleClick.bind(this);
-    this.handleGetDogs = this.handleGetDogs.bind(this);
+    // this.handleGetDogs = this.handleGetDogs.bind(this);
     this.dequeueDog = this.dequeueDog.bind(this);
   }
 
+  static contextType = context;
+
   componentDidMount() {
-    this.handleGetDogs();
+    this.context.handleGetDogs();
     this.interval();
   }
 
@@ -29,25 +32,25 @@ export default class Dog extends Component {
     setInterval(() => {
       console.log("dog adopted!");
       this.dequeueDog();
-      this.handleGetDogs();
+      this.context.handleGetDogs();
     }, 5000);
   }
 
-  handleGetDogs() {
-    /* when the component is mounted, immediately preform a GET request to /api/cats 
-       to receive cat image and cat info */
+  // handleGetDogs() {
+  //   /* when the component is mounted, immediately preform a GET request to /api/cats
+  //      to receive cat image and cat info */
 
-    const requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
+  //   const requestOptions = {
+  //     method: "GET",
+  //     redirect: "follow",
+  //   };
 
-    fetch(`${config.REACT_APP_PORT_URL}/api/dogs`, requestOptions)
-      // use chained promises to receive the data from the server
-      .then((response) => response.json())
-      .then((responseJSON) => this.setState({ dogs: responseJSON }))
-      .catch((err) => this.setState({ error: err }));
-  }
+  //   fetch(`${config.REACT_APP_PORT_URL}/api/dogs`, requestOptions)
+  //     // use chained promises to receive the data from the server
+  //     .then((response) => response.json())
+  //     .then((responseJSON) => this.setState({ dogs: responseJSON }))
+  //     .catch((err) => this.setState({ error: err }));
+  // }
 
   dequeueDog() {
     const requestOptions = {
@@ -67,7 +70,7 @@ export default class Dog extends Component {
     // function needs to trigger a DELETE request using the server
     this.dequeueDog();
     // once the cat/dog is dequeued, it also needs to update the state with the new set of cats and dogs
-    this.handleGetDogs();
+    this.context.handleGetDogs();
     setTimeout(() => {
       this.setState({ clicked: false });
     }, 3000);
@@ -88,7 +91,7 @@ export default class Dog extends Component {
   }
 
   render() {
-    const { dogs } = this.state;
+    const { dogs } = this.context;
 
     if (dogs.length === 0) {
       return <p className="col-md text-center">Loading Information</p>;

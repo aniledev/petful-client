@@ -13,8 +13,10 @@ export default class Root extends Component {
   state = {
     adopters: [],
     cats: [],
+    dogs: [],
     adopterError: null,
     catError: null,
+    dogError: null,
   };
 
   componentDidMount() {
@@ -59,6 +61,8 @@ export default class Root extends Component {
       .catch((err) => this.setState({ catError: err }));
   };
 
+  dequeueDog = () => {};
+
   handleGetCats = () => {
     /* when the component is mounted, immediately preform a GET
      request to /api/cats to receive cat image and cat info */
@@ -75,15 +79,32 @@ export default class Root extends Component {
     //    use this.setState to update state with response data
   };
 
+  handleGetDogs = () => {
+    const requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    fetch(`${config.REACT_APP_PORT_URL}/api/dogs`, requestOptions)
+      // use chained promises to receive the data from the server
+      .then((response) => response.json())
+      .then((responseJSON) => this.setState({ dogs: responseJSON }))
+      .catch((err) => this.setState({ dogError: err }));
+  };
+
   render() {
     const value = {
       adopters: this.state.adopters,
       cats: this.state.cats,
-      catError: this.state.error,
+      dogs: this.state.dogs,
       adopterError: this.state.adopterError,
+      catError: this.state.catError,
+      dogError: this.state.dogError,
       dequeuePerson: this.dequeuePerson,
       dequeueCat: this.dequeueCat,
+      dequeueDog: this.dequeueDog,
       handleGetCats: this.handleGetCats,
+      handleGetDogs: this.handleGetDogs,
     };
 
     return (
