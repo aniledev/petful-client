@@ -90,12 +90,23 @@ export default class Cat extends Component {
       return <p>Loading Information</p>;
     }
 
+    // const confirmationMessage = this.confirmAdoption();
+    const clicked = this.state.clicked;
+    const message = this.confirmAdoption();
+    let confirmationMessage;
+    if (clicked) {
+      confirmationMessage = <AdoptionConfirmation message={message} />;
+    } else {
+      confirmationMessage = <></>;
+    }
+
     return (
       <div className="col-md text-center">
         <CatHeading cats={cats} />
         <CatImage cats={cats} />
         <CatInfo cats={cats} />
         <div className="mb-5">
+          {confirmationMessage}
           <button
             type="button"
             className="btn adopt-button"
@@ -103,6 +114,9 @@ export default class Cat extends Component {
           >
             Adopt!
           </button>
+          {/* {this.state.clicked === true && (
+            <AdoptionConfirmation message={confirmationMessage} />
+          )} */}
         </div>
       </div>
     );
