@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CatHeading from "./CatHeading";
 import CatImage from "./CatImage";
 import CatInfo from "./CatInfo";
+import AdoptionConfirmation from "../../AdoptionConfirmation";
 import config from "../../config";
 
 export default class Cat extends Component {
