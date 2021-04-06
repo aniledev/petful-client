@@ -54,11 +54,17 @@ export default class Cat extends Component {
   }
 
   handleClick() {
+    // update clicked state
+    this.handleClickState();
     // when the event listener triggers it needs to trigger the DELETE request deletes the first animal from the queue
     this.dequeueCat();
     // once the first animal is deleted, state needs to be updated again using a GET request to api/cat
     this.handleGetCats();
-    alert("You're now a proud cat parent!");
+    // alert("You're now a proud cat parent!");
+    setTimeout(() => {
+      this.setState({ clicked: false });
+    }, 3000);
+  }
   }
 
   // add a timeout method that adopts a dog every 5 seconds
