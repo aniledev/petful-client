@@ -3,7 +3,7 @@ import CatHeading from "./CatHeading";
 import CatImage from "./CatImage";
 import CatInfo from "./CatInfo";
 import AdoptionConfirmation from "../AdoptionConfirmation";
-import config from "../../config";
+// import config from "../../config";
 import context from "../../context";
 
 export default class Cat extends Component {
@@ -12,12 +12,12 @@ export default class Cat extends Component {
     super(props);
     this.state = {
       // cats: [],
-      error: null,
+      // error: null,
       clicked: false,
     };
     this.handleClick = this.handleClick.bind(this);
     // this.handleGetCats = this.handleGetCats.bind(this);
-    this.dequeueCat = this.dequeueCat.bind(this);
+    // this.dequeueCat = this.dequeueCat.bind(this);
   }
 
   static contextType = context;
@@ -31,7 +31,7 @@ export default class Cat extends Component {
   interval() {
     setInterval(() => {
       console.log("cat adopted!");
-      this.dequeueCat();
+      this.context.dequeueCat();
       this.context.handleGetCats();
     }, 5000);
   }
@@ -52,6 +52,7 @@ export default class Cat extends Component {
   //   // use this.setState to update state with response data
   // }
 
+  /*
   dequeueCat() {
     //use a DELETE HTTP request to the heroku server and dequeue a cat
     const requestOptions = {
@@ -64,12 +65,13 @@ export default class Cat extends Component {
       .then((json) => this.setState({ cats: json }))
       .catch((err) => this.setState({ error: err }));
   }
+*/
 
   handleClick() {
     // update clicked state
     this.handleClickState();
     // when the event listener triggers it needs to trigger the DELETE request deletes the first animal from the queue
-    this.dequeueCat();
+    this.context.dequeueCat();
     // once the first animal is deleted, state needs to be updated again using a GET request to api/cat
     this.context.handleGetCats();
     setTimeout(() => {
