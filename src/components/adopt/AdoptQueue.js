@@ -29,7 +29,6 @@ export default class AdoptQueue extends Component {
 
     setInterval(() => {
       this.dequeuePerson();
-      console.log("person dequeued!");
     }, 3000);
   }
 
