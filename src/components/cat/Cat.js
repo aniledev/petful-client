@@ -85,7 +85,6 @@ export default class Cat extends Component {
     }
   }
 
-  // add a timeout method that adopts a dog every 5 seconds
   /* add a conditional rendering that will disable the adopt button 
   if it is not the users turn in the queue*/
 
@@ -93,7 +92,7 @@ export default class Cat extends Component {
     const { cats } = this.state;
 
     if (cats.length === 0) {
-      return <p>Loading Information</p>;
+      return <p className="col-md text-center">Loading Information</p>;
     }
 
     const clicked = this.state.clicked;
