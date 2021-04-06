@@ -25,8 +25,7 @@ export default class Cat extends Component {
 
   handleGetCats() {
     /* when the component is mounted, immediately preform a GET 
-    request to /api/cats 
-       to receive cat image and cat info */
+    request to /api/cats to receive cat image and cat info */
     const requestOptions = {
       method: "GET",
       redirect: "follow",
@@ -60,7 +59,6 @@ export default class Cat extends Component {
     this.dequeueCat();
     // once the first animal is deleted, state needs to be updated again using a GET request to api/cat
     this.handleGetCats();
-    // alert("You're now a proud cat parent!");
     setTimeout(() => {
       this.setState({ clicked: false });
     }, 3000);
@@ -68,13 +66,11 @@ export default class Cat extends Component {
 
   handleClickState() {
     this.setState({ clicked: true });
-    console.log("This.state.clicked === true");
   }
 
   confirmAdoption() {
     const clicked = this.state.clicked;
     if (clicked === true) {
-      console.log("state changed to true");
       return "You're now a proud pet parent!";
     }
   }
@@ -90,7 +86,6 @@ export default class Cat extends Component {
       return <p>Loading Information</p>;
     }
 
-    // const confirmationMessage = this.confirmAdoption();
     const clicked = this.state.clicked;
     const message = this.confirmAdoption();
     let confirmationMessage;
@@ -114,9 +109,6 @@ export default class Cat extends Component {
           >
             Adopt!
           </button>
-          {/* {this.state.clicked === true && (
-            <AdoptionConfirmation message={confirmationMessage} />
-          )} */}
         </div>
       </div>
     );
