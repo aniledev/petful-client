@@ -3,6 +3,10 @@ import React from "react";
 // use createContext to initialize context for use in application
 
 export default React.createContext({
+  name: {
+    value: "",
+    changed: false,
+  },
   adopters: [],
   cats: [],
   dogs: [],
@@ -14,5 +18,6 @@ export default React.createContext({
   dequeueDog: () => {},
   handleGetCats: () => {},
   handleGetDogs: () => {},
+  handleOnChange: () => {},
   // handleAdoptClick: () => {},
 });
