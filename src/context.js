@@ -19,5 +19,7 @@ export default React.createContext({
   handleGetCats: () => {},
   handleGetDogs: () => {},
   handleOnChange: () => {},
+  setPersonInterval: () => {},
+  setCatInterval: () => {},
   // handleAdoptClick: () => {},
 });
