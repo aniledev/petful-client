@@ -20,18 +20,18 @@ export default class Cat extends Component {
 
   componentDidMount() {
     this.context.handleGetCats();
-    this.interval();
+    this.context.setCatInterval();
   }
 
-  // write a function that triggers setInterval to dequeue a cat and also handlesGetCats to update the state
-  interval() {
-    this.context.setCatInterval();
-    // this.context.setCatInterval(() => {
-    //   console.log("cat adopted!");
-    //   this.context.dequeueCat();
-    //   this.context.handleGetCats();
-    // }, 5000);
-  }
+  // // write a function that triggers setInterval to dequeue a cat and also handlesGetCats to update the state
+  // interval() {
+  //   this.context.setCatInterval();
+  //   // this.context.setCatInterval(() => {
+  //   //   console.log("cat adopted!");
+  //   //   this.context.dequeueCat();
+  //   //   this.context.handleGetCats();
+  //   // }, 5000);
+  // }
 
   handleClick() {
     // update clicked state
