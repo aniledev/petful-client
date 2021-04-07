@@ -67,7 +67,7 @@ export default class Dog extends Component {
   // if (this.context.name !== this.context.adopters[0]){return true} else return false
   // create disabled attribute for button element
 
-  checkFirstInLine() {
+  checkFirstInLineDisable() {
     const userName = this.context.name.trim();
     const frontOfQueue = this.context.adopters;
     console.log(userName);
@@ -105,7 +105,7 @@ export default class Dog extends Component {
           <button
             type="button"
             className="btn adopt-button"
-            disabled={this.checkFirstInLine()}
+            disabled={this.checkFirstInLineDisable()}
             onClick={this.handleClick}
           >
             Adopt!
