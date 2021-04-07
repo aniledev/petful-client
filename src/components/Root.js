@@ -35,9 +35,7 @@ export default class Root extends Component {
       .then((responseJSON) => this.setState({ adopters: responseJSON }))
       .catch((err) => this.setState({ adopterError: err }));
 
-    setInterval(() => {
-      this.dequeuePerson();
-    }, 5000);
+    this.setPersonInterval();
   }
 
   dequeuePerson = () => {
@@ -111,6 +109,20 @@ export default class Root extends Component {
     });
   };
 
+  setPersonInterval = () => {
+    setInterval(() => {
+      this.dequeuePerson();
+    }, 5000);
+  };
+
+  setCatInterval = () => {
+    setInterval(() => {
+      console.log("cat adopted!");
+      this.dequeueCat();
+      this.handleGetCats();
+    }, 5000);
+  };
+
   render() {
     const value = {
       name: this.state.name.value,
@@ -127,6 +139,8 @@ export default class Root extends Component {
       handleGetCats: this.handleGetCats,
       handleGetDogs: this.handleGetDogs,
       handleOnChange: this.handleOnChange,
+      setPersonInterval: this.setPersonInterval,
+      setCatInterval: this.setCatInterval,
     };
 
     return (
