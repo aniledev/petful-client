@@ -20,18 +20,18 @@ export default class Dog extends Component {
 
   componentDidMount() {
     this.context.handleGetDogs();
-    this.interval();
+    this.context.setDogInterval();
   }
 
-  // write a function that triggers setInterval to dequeue a cat and also handlesGetCats to update the state
-  interval() {
-    this.context.setDogInterval();
-    //   setInterval(() => {
-    //     console.log("dog adopted!");
-    //     this.context.dequeueDog();
-    //     this.context.handleGetDogs();
-    //   }, 5000);
-  }
+  // // write a function that triggers setInterval to dequeue a cat and also handlesGetCats to update the state
+  // interval() {
+  //   this.context.setDogInterval();
+  //   //   setInterval(() => {
+  //   //     console.log("dog adopted!");
+  //   //     this.context.dequeueDog();
+  //   //     this.context.handleGetDogs();
+  //   //   }, 5000);
+  // }
 
   handleClick() {
     // update clicked state
