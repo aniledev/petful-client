@@ -24,5 +24,6 @@ export default React.createContext({
   setDogInterval: () => {},
   stopSetIntervals: () => {},
   stopDequeueing: () => {},
+  startSetIntervals: () => {},
   // handleAdoptClick: () => {},
 });
