@@ -68,12 +68,23 @@ export default class Cat extends Component {
   checkFirstInLineDisable() {
     const userName = this.context.name.trim();
     const frontOfQueue = this.context.adopters;
-    console.log(userName);
-    console.log(frontOfQueue[0]);
+    // console.log(userName);
+    // console.log(frontOfQueue[0]);
     if (userName !== frontOfQueue[0]) {
       return true;
     } else {
+      this.context.stopSetIntervals();
       return false;
+    }
+  }
+  
+  stopDequeueing() {
+    const userName = this.context.name.trim();
+    const frontOfQueue = this.context.adopters;
+    console.log(userName);
+    console.log(frontOfQueue[0]);
+    if (userName === frontOfQueue[0]) {
+      this.context.stopSetIntervals();
     }
   }
 
