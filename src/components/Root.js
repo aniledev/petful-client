@@ -150,6 +150,8 @@ export default class Root extends Component {
       setPersonInterval: this.setPersonInterval,
       setCatInterval: this.setCatInterval,
       setDogInterval: this.setDogInterval,
+      stopSetIntervals: this.stopSetIntervals,
+      stopDequeueing: this.stopDequeueing,
     };
 
     return (
