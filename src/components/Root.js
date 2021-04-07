@@ -131,6 +131,12 @@ export default class Root extends Component {
     }, 5000);
   };
 
+  stopSetIntervals() {
+    for (let i = 0; i < 100; i++) {
+      window.clearInterval(i);
+    }
+  }
+
   render() {
     const value = {
       name: this.state.name.value,
