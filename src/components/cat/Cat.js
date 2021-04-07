@@ -36,6 +36,7 @@ export default class Cat extends Component {
   handleClick() {
     // update clicked state
     this.handleClickState();
+    this.context.dequeuePerson();
     // when the event listener triggers it needs to trigger the DELETE request deletes the first animal from the queue
     this.context.dequeueCat();
     // once the first animal is deleted, state needs to be updated again using a GET request to api/cat
