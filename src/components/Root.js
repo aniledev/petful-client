@@ -123,6 +123,14 @@ export default class Root extends Component {
     }, 5000);
   };
 
+  setDogInterval = () => {
+    setInterval(() => {
+      console.log("dog adopted!");
+      this.dequeueDog();
+      this.handleGetDogs();
+    }, 5000);
+  };
+
   render() {
     const value = {
       name: this.state.name.value,
@@ -141,6 +149,7 @@ export default class Root extends Component {
       handleOnChange: this.handleOnChange,
       setPersonInterval: this.setPersonInterval,
       setCatInterval: this.setCatInterval,
+      setDogInterval: this.setDogInterval,
     };
 
     return (
