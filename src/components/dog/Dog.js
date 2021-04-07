@@ -62,17 +62,9 @@ export default class Dog extends Component {
   /* add a conditional rendering that will disable the adopt button 
   if it is not the users turn in the queue*/
 
-  // create a variable to hold this.context.name (the name from the landing form)
-  // create a variable to hold the this.context.adopters[0]
-  // create a function firstInLine(){}
-  // if (this.context.name !== this.context.adopters[0]){return true} else return false
-  // create disabled attribute for button element
-
   checkFirstInLineDisable() {
     const userName = this.context.name.trim();
     const frontOfQueue = this.context.adopters;
-    console.log(userName);
-    console.log(frontOfQueue[0]);
     if (userName !== frontOfQueue[0]) {
       return true;
     } else {

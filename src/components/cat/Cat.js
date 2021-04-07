@@ -77,7 +77,7 @@ export default class Cat extends Component {
       return false;
     }
   }
-  
+
   stopDequeueing() {
     const userName = this.context.name.trim();
     const frontOfQueue = this.context.adopters;
