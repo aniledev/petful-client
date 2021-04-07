@@ -137,6 +137,11 @@ export default class Root extends Component {
     }
   }
 
+  startSetIntervals = () => {
+    this.setPersonInterval();
+    console.log("person interval started after click");
+  };
+
   render() {
     const value = {
       name: this.state.name.value,
@@ -158,6 +163,7 @@ export default class Root extends Component {
       setDogInterval: this.setDogInterval,
       stopSetIntervals: this.stopSetIntervals,
       stopDequeueing: this.stopDequeueing,
+      startSetIntervals: this.startSetIntervals,
     };
 
     return (
