@@ -41,6 +41,7 @@ export default class Cat extends Component {
     this.context.dequeueCat();
     // once the first animal is deleted, state needs to be updated again using a GET request to api/cat
     this.context.handleGetCats();
+    // FOR SOME REASON THIS TIMEOUT FUNCTION IS NOT BEING CALLED AND THE STATE IS NOT UPDATING, MEANING THAT THE CONFIRMATION MESSAGE NEVER GOES AWAY AND THE BUTTONS DO NO DISABLE ANYMORE
     setTimeout(() => {
       this.setState({ clicked: false });
     }, 3000);
