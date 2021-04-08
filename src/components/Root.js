@@ -137,10 +137,12 @@ export default class Root extends Component {
     }
   }
 
-  startSetIntervals = () => {
-    this.setPersonInterval();
-    console.log("person interval started after click");
-  };
+  // startSetIntervals = () => {
+  //   setInterval(() => {
+  //     this.dequeuePerson();
+  //   }, 5000);
+  //   console.log("person interval started after click");
+  // };
 
   render() {
     const value = {
@@ -162,7 +164,7 @@ export default class Root extends Component {
       setCatInterval: this.setCatInterval,
       setDogInterval: this.setDogInterval,
       stopSetIntervals: this.stopSetIntervals,
-      stopDequeueing: this.stopDequeueing,
+      // stopDequeueing: this.stopDequeueing,
       startSetIntervals: this.startSetIntervals,
     };
 
