@@ -79,15 +79,15 @@ export default class Cat extends Component {
     }
   }
 
-  stopDequeueing() {
-    const userName = this.context.name.trim();
-    const frontOfQueue = this.context.adopters;
-    console.log(userName);
-    console.log(frontOfQueue[0]);
-    if (userName === frontOfQueue[0]) {
-      this.context.stopSetIntervals();
-    }
-  }
+  // stopDequeueing() {
+  //   const userName = this.context.name.trim();
+  //   const frontOfQueue = this.context.adopters;
+  //   console.log(userName);
+  //   console.log(frontOfQueue[0]);
+  //   if (userName === frontOfQueue[0]) {
+  //     this.context.stopSetIntervals();
+  //   }
+  // }
 
   render() {
     const { cats } = this.context;
