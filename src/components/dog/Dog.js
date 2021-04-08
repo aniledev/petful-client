@@ -58,6 +58,9 @@ export default class Dog extends Component {
     if (clicked === true) {
       return "You're now a proud pet parent!";
     }
+    if (!clicked) {
+      return;
+    }
   }
 
   /* add a conditional rendering that will disable the adopt button 
