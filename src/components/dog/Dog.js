@@ -69,6 +69,7 @@ export default class Dog extends Component {
     if (userName !== frontOfQueue[0]) {
       return true;
     } else {
+      this.context.stopSetIntervals();
       return false;
     }
   }
