@@ -33,9 +33,9 @@ export default class NavBar extends Component {
               <a className="nav-link" href="/about">
                 About
               </a>
-              <a className="nav-link" href="/pets">
+              {/* <a className="nav-link" href="/pets">
                 Pets
-              </a>
+              </a> */}
               <a className="nav-link" href="/contact">
                 Contact Us
               </a>
