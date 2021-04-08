@@ -15,7 +15,7 @@ class ContactView extends Component {
             </h1>
           </div>
           <div className="d-flex justify-content-center mb-5">
-            <p className="subtitle text-center">
+            <div className="subtitle text-center">
               <p>Nice of you to stop by!</p>
               <p>
                 My name's Elina, and I'm the creator behind this website. If you
@@ -29,7 +29,7 @@ class ContactView extends Component {
                 experience on the front end, back end, or both. Let's not stay
                 strangers.
               </p>
-            </p>
+            </div>
           </div>
         </main>
         <Footer />
