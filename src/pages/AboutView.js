@@ -15,14 +15,21 @@ class AboutView extends Component {
             </h1>
           </div>
           <div className="d-flex justify-content-center mb-5">
-            <p className="subtitle text-center">
-              In this project, I created a FIFO (First In First Out) pet
-              adoption service using a queue data structure. This full stack
-              application has a custom built RESTful API using Express and
-              allows for CRUD actions. It is powered by a queue data structure
-              and JavaScript. The front end is deployed with Vercel while the
-              backend is deployed with Heroku.
-            </p>
+            <div className="subtitle text-center">
+              <p>
+                In this project, I created a FIFO (First In First Out) pet
+                adoption service for adopting dogs and cats.
+              </p>
+              <p>
+                This full stack application has a custom built RESTful API using
+                Express and allows for CRUD actions. It is powered by a queue
+                data structure and JavaScript.
+              </p>
+              <p>
+                The front end is deployed with Vercel while the backend is
+                hosted with Heroku.
+              </p>
+            </div>
           </div>
         </main>
         <Footer />
