@@ -6,7 +6,6 @@ import AdoptionConfirmation from "../AdoptionConfirmation";
 import context from "../../context";
 
 export default class Dog extends Component {
-  // initialize state to hold fetch data for dogs
   constructor(props) {
     super(props);
     this.state = {
@@ -22,33 +21,16 @@ export default class Dog extends Component {
     this.context.setDogInterval();
   }
 
-  // // write a function that triggers setInterval to dequeue a cat and also handlesGetCats to update the state
-  // interval() {
-  //   this.context.setDogInterval();
-  //   //   setInterval(() => {
-  //   //     console.log("dog adopted!");
-  //   //     this.context.dequeueDog();
-  //   //     this.context.handleGetDogs();
-  //   //   }, 5000);
-  // }
-
   handleClick() {
-    // update clicked state
     this.handleClickState();
     this.context.dequeuePerson();
-    // function needs to trigger a DELETE request using the server
     this.context.dequeueDog();
-    // once the cat/dog is dequeued, it also needs to update the state with the new set of cats and dogs
     this.context.handleGetDogs();
-    // FOR SOME REASON THIS TIMEOUT FUNCTION IS NOT BEING CALLED AND THE STATE IS NOT UPDATING, MEANING THAT THE CONFIRMATION MESSAGE NEVER GOES AWAY AND THE BUTTONS DO NO DISABLE ANYMORE
 
     setTimeout(() => {
       this.setState({ clicked: false });
     }, 3000);
   }
-
-  /* add a conditional rendering that will disable the adopt button if 
-  it is not the users turn in the queue*/
 
   handleClickState() {
     this.setState({ clicked: true });
@@ -63,9 +45,6 @@ export default class Dog extends Component {
       return;
     }
   }
-
-  /* add a conditional rendering that will disable the adopt button 
-  if it is not the users turn in the queue*/
 
   checkFirstInLineDisable() {
     const userName = this.context.name.trim();
@@ -114,5 +93,3 @@ export default class Dog extends Component {
     );
   }
 }
-
-// add prop types for the props that are passed down

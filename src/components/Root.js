@@ -30,7 +30,6 @@ export default class Root extends Component {
     };
 
     fetch(`${config.REACT_APP_PORT_URL}/api/people`, requestOptions)
-      // use chained promises to receive the data from the server
       .then((response) => response.json())
       .then((responseJSON) => this.setState({ adopters: responseJSON }))
       .catch((err) => this.setState({ adopterError: err }));
@@ -51,7 +50,6 @@ export default class Root extends Component {
   };
 
   dequeueCat = () => {
-    //use a DELETE HTTP request to the heroku server and dequeue a cat
     const requestOptions = {
       method: "DELETE",
       redirect: "follow",
@@ -76,18 +74,15 @@ export default class Root extends Component {
   };
 
   handleGetCats = () => {
-    /* preform a GET request to /api/cats to receive cat image and cat info */
     const requestOptions = {
       method: "GET",
       redirect: "follow",
     };
 
     fetch(`${config.REACT_APP_PORT_URL}/api/cats`, requestOptions)
-      // use chained promises to receive the data from the server
       .then((response) => response.json())
       .then((responseJSON) => this.setState({ cats: responseJSON }))
       .catch((err) => this.setState({ catError: err }));
-    //    use this.setState to update state with response data
   };
 
   handleGetDogs = () => {
@@ -97,7 +92,6 @@ export default class Root extends Component {
     };
 
     fetch(`${config.REACT_APP_PORT_URL}/api/dogs`, requestOptions)
-      // use chained promises to receive the data from the server
       .then((response) => response.json())
       .then((responseJSON) => this.setState({ dogs: responseJSON }))
       .catch((err) => this.setState({ dogError: err }));
@@ -137,13 +131,6 @@ export default class Root extends Component {
     }
   }
 
-  // startSetIntervals = () => {
-  //   setInterval(() => {
-  //     this.dequeuePerson();
-  //   }, 5000);
-  //   console.log("person interval started after click");
-  // };
-
   render() {
     const value = {
       name: this.state.name.value,
@@ -164,7 +151,6 @@ export default class Root extends Component {
       setCatInterval: this.setCatInterval,
       setDogInterval: this.setDogInterval,
       stopSetIntervals: this.stopSetIntervals,
-      // stopDequeueing: this.stopDequeueing,
       startSetIntervals: this.startSetIntervals,
     };
 

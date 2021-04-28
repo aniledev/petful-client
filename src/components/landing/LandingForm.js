@@ -4,7 +4,6 @@ import context from "../../context";
 import ValidationError from "../ValidationError";
 
 class LandingForm extends Component {
-  // initialize state to hold controlled form components
   constructor(props) {
     super(props);
     this.state = {
@@ -17,11 +16,7 @@ class LandingForm extends Component {
 
   static contextType = context;
 
-  // create an onChange of the input box update this.state.name
   handleOnChange(name) {
-    // this.setState({
-    //   name: { value: name, changed: true },
-    // });
     this.context.handleOnChange(name);
   }
 
@@ -31,7 +26,6 @@ class LandingForm extends Component {
     this.props.history.push("/adopt");
   }
 
-  // write method to validate the input box
   validateUserInput() {
     const name = this.context.name.trim();
     if (!name) {
@@ -45,7 +39,6 @@ class LandingForm extends Component {
     }
   }
 
-  // write method that uses the POST/api/people to add the name to the list of adopters
   addNameToQueue() {
     const name = this.context.name.trim();
 
@@ -64,11 +57,9 @@ class LandingForm extends Component {
     };
 
     fetch(`${config.REACT_APP_PORT_URL}/api/people`, requestOptions)
-      // use chained promises to post the data to the server, no data is received from this POST
       .then((response) => response.json())
       .then((responseJSON) => console.log(responseJSON))
       .catch((error) => console.log("error", error));
-    // clear this.state.name once the POST request is successful
   }
 
   render() {

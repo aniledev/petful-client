@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import context from "../../context";
 
 export default class AdoptQueue extends Component {
-  // initialize state to hold fetch data for adopters
   constructor(props) {
     super(props);
     this.state = {};
