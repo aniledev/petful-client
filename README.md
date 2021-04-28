@@ -63,7 +63,7 @@ This full stack pet adoption application relies on the use of a [queue data stru
 
 ## Upcoming Features
 
-For a list of upcoming features and bug fixes that are good for beginner developers looking to contribute, check the Issues tab of this repo.
+For a list of upcoming features and bug fixes that are good for beginner developers looking to contribute, check the [Issues](https://github.com/aniledev/petful-client/issues) tab of this repo.
 
 
 ## Deployment
