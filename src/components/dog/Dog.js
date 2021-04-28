@@ -3,7 +3,6 @@ import DogHeading from "./DogHeading";
 import DogImage from "./DogImage";
 import DogInfo from "./DogInfo";
 import AdoptionConfirmation from "../AdoptionConfirmation";
-// import config from "../../config";
 import context from "../../context";
 
 export default class Dog extends Component {

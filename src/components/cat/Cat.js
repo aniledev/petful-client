@@ -3,7 +3,6 @@ import CatHeading from "./CatHeading";
 import CatImage from "./CatImage";
 import CatInfo from "./CatInfo";
 import AdoptionConfirmation from "../AdoptionConfirmation";
-// import config from "../../config";
 import context from "../../context";
 
 export default class Cat extends Component {

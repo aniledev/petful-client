@@ -21,7 +21,6 @@ export default class NavBar extends Component {
               <span className="navbar-toggler-icon"></span>
             </button>
           </div>
-
           <div
             className="collapse navbar-collapse flex-row-reverse"
             id="navbarNavAltMarkup"
@@ -33,9 +32,6 @@ export default class NavBar extends Component {
               <a className="nav-link" href="/about">
                 About
               </a>
-              {/* <a className="nav-link" href="/pets">
-                Pets
-              </a> */}
               <a className="nav-link" href="/contact">
                 Contact Us
               </a>

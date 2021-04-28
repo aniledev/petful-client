@@ -11,15 +11,11 @@ class AdoptView extends Component {
     return (
       <>
         <Navbar />
-
         <main className="container-md adopt">
           <AdoptInstructions />
-
           <AdoptQueue />
-
           <AdoptSelection />
         </main>
-
         <Footer />
       </>
     );

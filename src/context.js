@@ -25,5 +25,4 @@ export default React.createContext({
   stopSetIntervals: () => {},
   stopDequeueing: () => {},
   startSetIntervals: () => {},
-  // handleAdoptClick: () => {},
 });

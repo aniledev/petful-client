@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import config from "../../config";
 import context from "../../context";
 
 export default class AdoptQueue extends Component {
