@@ -6,6 +6,8 @@
 <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/aniledev/petful-client">
 <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/aniledev/petful-client">
 <img alt="GitHub repo size in bytes" src="https://img.shields.io/github/repo-size/aniledev/petful-client">
+  <img alt="GitHub issues" src="https://img.shields.io/github/issues/aniledev/petful-client?color=red">
+<img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/aniledev/petful-client?color=blueviolet">
 </p>
 
 <!-- TABLE OF CONTENTS -->
